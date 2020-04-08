@@ -1,0 +1,147 @@
+/* pages/studyWord/studyWord.wxss */
+page {
+    background-color: #fff;
+    .color_green{
+        color: #23b26d;
+    }
+    .color_grey{
+        color: #97a5aa;
+    }
+    .shadow_normol{
+        box-shadow: 0 0 10rpx #efefef;
+    }
+    .shadow_large{
+        // box-shadow:0 1rpx 2rpx 1rpx  #dedede;
+        box-shadow: 15px 0 15px -15px #dedede,-15px 0 15px -15px #dedede;
+    }
+    .border_normol{
+        border-bottom: solid 13rpx #97a5aa;
+    }
+    .border_green{
+        border-bottom: solid 13rpx #23b26d;
+    }
+  } 
+.page_index {
+    position: relative;
+    .page_head {
+        height: 45vh;
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        .head_img{
+            margin-top: 50rpx;
+            border-radius: 50%;
+            width: 120rpx;
+            height: 120rpx;
+        }
+        .head_text {
+            margin-top: 10rpx;
+            font-size: 40rpx;
+        }
+        .head_circleProgramme {
+            margin-top: 30rpx;
+            color: #455358;
+            font-size: 40rpx;
+            font-weight: bold;
+            .head_circle_text{
+                font-size: 28rpx;
+                // font-weight: normal;
+            }
+        }
+    }
+  
+    .page_grades {
+        height: 45vh;
+        width: 96%;
+        // background-color:#d6cfe2 ;
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translateX(-50%);
+        text-align: center;
+        margin-top: 500rpx;
+        .page_grades_content{
+            .page_grades_item{
+                width: 31%;
+                display: inline-block;
+                margin: 12rpx 10rpx;
+                padding: 0 10rpx;
+                font-weight: bold;
+                height: 150rpx;
+                border-top: #dedede 2rpx solid;
+                border-left: #dedede 2rpx solid;
+                border-right: #dedede 2rpx solid;
+                // border-bottom: #dedede 2rpx solid;
+                .page_grades_icon{
+                    width: 100%;
+                    padding: 8rpx 10rpx 8rpx 0rpx;
+                    .perGrade_icon{
+                        width: 30%;
+                        margin-left: 70%;
+                        font-size: 30rpx;
+                    }
+                }
+                .grade_num{
+                    font-size: 40rpx;
+                }
+                .grade_text{
+                    font-size: 27rpx;
+                }
+            }
+        }
+    }
+  
+    .page_perWords {
+        width: 96%;
+        padding-bottom: 100rpx;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top:670rpx;
+        margin-bottom: 100rpx;
+        .perWord_grade {
+            margin: 15rpx 0;
+            .perWords_wordItem {
+                background-color: #fff;
+                margin: 30rpx 0;
+                padding: 15rpx 30rpx;
+                font-size: 33rpx;
+                border: #dedede 2rpx solid;
+              .perWords_word_English {
+                margin-bottom: 15rpx;
+              }
+          
+              .perWords_word_Chinese {
+                line-height:1.8em; 
+              }
+            }
+          }
+    }
+    .startStudy_view{
+        width: 100%;
+        position: fixed;
+        height: 160rpx;
+        bottom: 0;
+        background-color: white;
+        .startStudy{
+            width: 90%;
+            height: 120rpx;
+            // position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3ccfcf;
+            color: white;
+            font-size: 40rpx;
+            line-height: 42rpx;
+            border-radius: 20rpx;
+            text-align: center;
+            position: fixed;
+            bottom: 20rpx;
+            .startStudy_Btn{
+                margin-top: 45rpx;
+            }
+        }
+  }
+}

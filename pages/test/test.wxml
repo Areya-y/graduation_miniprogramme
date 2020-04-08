@@ -1,0 +1,11 @@
+<!--pages/test/test.wxml-->
+<view class="addnum">
+    <button class="num" bindtap="addNum">
+        {{a/b*100+'%'}}
+    </button>
+    <button class="num" bindtap="test">
+        {{c}}
+    </button>
+</view>
+
+ 

@@ -1,0 +1,8 @@
+<!-- pages/login/login.wxml -->
+<button  
+    class="login iconfont iconweixin"  
+    open-type="getUserInfo" 
+    bindgetuserinfo="handleGetUserInfo" 
+    type="primary">
+        微信一键登录
+</button>

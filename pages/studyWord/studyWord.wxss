@@ -1,0 +1,137 @@
+/* pages/studyWord/studyWord.wxss */
+page {
+  background-color: #fff;
+}
+page .color_green {
+  color: #23b26d;
+}
+page .color_grey {
+  color: #97a5aa;
+}
+page .shadow_normol {
+  box-shadow: 0 0 10rpx #efefef;
+}
+page .shadow_large {
+  box-shadow: 15px 0 15px -15px #dedede, -15px 0 15px -15px #dedede;
+}
+page .border_normol {
+  border-bottom: solid 13rpx #97a5aa;
+}
+page .border_green {
+  border-bottom: solid 13rpx #23b26d;
+}
+.page_index {
+  position: relative;
+}
+.page_index .page_head {
+  height: 45vh;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.page_index .page_head .head_img {
+  margin-top: 50rpx;
+  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
+}
+.page_index .page_head .head_text {
+  margin-top: 10rpx;
+  font-size: 40rpx;
+}
+.page_index .page_head .head_circleProgramme {
+  margin-top: 30rpx;
+  color: #455358;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.page_index .page_head .head_circleProgramme .head_circle_text {
+  font-size: 28rpx;
+}
+.page_index .page_grades {
+  height: 45vh;
+  width: 96%;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 500rpx;
+}
+.page_index .page_grades .page_grades_content .page_grades_item {
+  width: 31%;
+  display: inline-block;
+  margin: 12rpx 10rpx;
+  padding: 0 10rpx;
+  font-weight: bold;
+  height: 150rpx;
+  border-top: #dedede 2rpx solid;
+  border-left: #dedede 2rpx solid;
+  border-right: #dedede 2rpx solid;
+}
+.page_index .page_grades .page_grades_content .page_grades_item .page_grades_icon {
+  width: 100%;
+  padding: 8rpx 10rpx 8rpx 0rpx;
+}
+.page_index .page_grades .page_grades_content .page_grades_item .page_grades_icon .perGrade_icon {
+  width: 30%;
+  margin-left: 70%;
+  font-size: 30rpx;
+}
+.page_index .page_grades .page_grades_content .page_grades_item .grade_num {
+  font-size: 40rpx;
+}
+.page_index .page_grades .page_grades_content .page_grades_item .grade_text {
+  font-size: 27rpx;
+}
+.page_index .page_perWords {
+  width: 96%;
+  padding-bottom: 100rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 670rpx;
+  margin-bottom: 100rpx;
+}
+.page_index .page_perWords .perWord_grade {
+  margin: 15rpx 0;
+}
+.page_index .page_perWords .perWord_grade .perWords_wordItem {
+  background-color: #fff;
+  margin: 30rpx 0;
+  padding: 15rpx 30rpx;
+  font-size: 33rpx;
+  border: #dedede 2rpx solid;
+}
+.page_index .page_perWords .perWord_grade .perWords_wordItem .perWords_word_English {
+  margin-bottom: 15rpx;
+}
+.page_index .page_perWords .perWord_grade .perWords_wordItem .perWords_word_Chinese {
+  line-height: 1.8em;
+}
+.page_index .startStudy_view {
+  width: 100%;
+  position: fixed;
+  height: 160rpx;
+  bottom: 0;
+  background-color: white;
+}
+.page_index .startStudy_view .startStudy {
+  width: 90%;
+  height: 120rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3ccfcf;
+  color: white;
+  font-size: 40rpx;
+  line-height: 42rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 20rpx;
+}
+.page_index .startStudy_view .startStudy .startStudy_Btn {
+  margin-top: 45rpx;
+}

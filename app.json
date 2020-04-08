@@ -1,0 +1,55 @@
+{
+	"pages": [
+		"pages/index/index",  
+		"pages/test/test",   
+		"pages/searchWord/searchWord",
+		"pages/wordDetails/wordDetails",
+		"pages/selectWordBooks/selectWordBooks",
+		"pages/wordBook/wordBook",
+		"pages/studyWord/studyWord",
+		"pages/studyWord_content/studyWord_content",
+		"pages/wordCards/wordCards",
+		"pages/writeWords/writeWords", 
+		"pages/writeWords_content/writeWords_content",
+		"pages/selfStudyRoom_index/selfStudyRoom_index",
+		"pages/user/user",
+		"pages/login/login",
+		"pages/newWords_notebook/newWords_notebook"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarTitleText": "考研英语冲鸭",   
+		"navigationBarTextStyle": "white",
+		"navigationBarBackgroundColor":"#4257b2"
+	},
+	"tabBar": {
+		"backgroundColor": "#fefefe",
+		"position": "bottom",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/searchWord/searchWord",
+				"iconPath": "icons/_searchWord.png",
+				"selectedIconPath": "icons/searchWord.png"
+			},
+			{
+				"pagePath": "pages/selectWordBooks/selectWordBooks",
+				"iconPath": "icons/_wordBooks.png",
+				"selectedIconPath": "icons/wordBooks.png"
+			},{
+				"pagePath": "pages/index/index",
+				"iconPath": "icons/_index.png",
+				"selectedIconPath": "icons/index.png"
+			},{
+				"pagePath": "pages/selfStudyRoom_index/selfStudyRoom_index",  
+				"iconPath": "icons/_selfStudyRoom.png",
+				"selectedIconPath": "icons/selfStudyRoom.png"
+			},{
+				"pagePath": "pages/user/user",
+				"iconPath": "icons/_user.png",
+				"selectedIconPath": "icons/user.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json"
+}

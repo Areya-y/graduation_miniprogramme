@@ -1,0 +1,35 @@
+<!--pages/wordBook/wordBook.wxml-->
+<view class="page_index">
+    <view class="wordBook_head">
+        <view class="wordBook_content">
+            <text class="wordBook_name">基础单词01</text><text class="wordBook_number">50条词语</text>
+        </view>
+    </view>
+    <view class="wordBook_functions">
+        <navigator class="wordBookBtn_study wordBookBtn shadow-warp" url="/pages/studyWord/studyWord" >
+            <view class="study_icon wordBook_icon iconfont iconxuexizhuo"></view>
+            <view class="study_text wordBook_text">学习</view>
+        </navigator>
+        <navigator class="wordBookBtn_card wordBookBtn shadow-warp" url="/pages/wordCards/wordCards" >
+            <view class="card_icon wordBook_icon iconfont iconicon-test"></view>
+            <view class="card_text wordBook_text">单词卡</view>
+        </navigator>
+        <navigator class="wordBookBtn_write wordBookBtn shadow-warp" url="/pages/writeWords/writeWords" >
+            <view class="write_icon wordBook_icon iconfont iconxiezi"></view>
+            <view class="write_text wordBook_text">书写</view>
+        </navigator>
+    </view>
+    <view class="wordBook_words">
+        <view class="wordBook_words_head">
+            单词
+        </view>
+        <view class="wordBook_wordList">
+            <navigator class="wordBook_wordItem shadow-blur" url="/pages/wordDetails/wordDetails"
+            wx:for="{{wordsList}}" wx:key="{{item.id}}">
+                <view class="wordBook_word_English">{{item.word}}</view>
+                <view class="wordBook_word_Chinese">{{item.interpretation}}</view>
+            </navigator>    
+        </view>
+    </view>
+</view>
+

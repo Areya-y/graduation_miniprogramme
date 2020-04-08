@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="page_index">
+  <image class='countdown_background' src="https://s1.ax1x.com/2020/03/19/8sBbKH.jpg" ></image>
+  <view class="index_content">
+      <view class="countdown_time">
+      <!--倒计时 -->
+      <view class='today'>今天是{{myDate}}</view>
+      <text class="user-motto">
+      距离考试还有：
+      <text class="dd">{{d}}</text> 天 <text class="dd">{{h}}</text> 时 <text class="dd">{{m}}</text> 分 <text class="dd">{{s}}</text> 秒 
+      </text>
+    </view>
+    <view class="motto">
+      <view class="question">
+        “你为什么要那么努力?”
+      </view>
+      <view class="answer">
+        “想去的地方很远，想要的东西很贵，喜欢的人很优秀，父亲的白发，周围人的嘲笑，以及，天生傲骨。”
+      </view>
+      <view class="resource">——网易云热评《dream is possible》</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+

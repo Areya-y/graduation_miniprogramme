@@ -1,0 +1,113 @@
+/* pages/studyWord_content/studyWord_content.less */
+page{
+    .color_green{
+        color: #2ab671;
+    }
+    .color_grey{
+        color: #9aa3a6;
+    }
+}
+// button[plain] {
+//     border: none;
+//     border-color: transparent;
+// }
+.page_index {
+    .page_bgImg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-size: 100% 100%;
+        z-index: -1;
+        filter: opacity(15%);
+    }
+  
+    .studyWord_title {
+        font-weight: bold;
+        .studyWors_titleList{
+            width: 38%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 28rpx;
+            margin-top: 25rpx;
+            .studyWors_title_item{
+                text-align: center;
+                font-size: 33rpx;
+            }
+            .studyWors_arrow{
+                text-align: center;
+                font-size: 31rpx;
+            }
+        }
+        .studyWors_iconList{
+            width: 38%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 64rpx;
+            .iconList_title_item{
+                text-align: center;
+                font-size: 28rpx;
+            }
+        }
+        
+    }
+  
+    .word_info {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 180rpx;
+        font-size: 50rpx;
+        font-weight: bold;
+    }
+  
+    .word_interpretationsList {
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 300rpx;
+        .selectBtn{
+            margin: 30rpx 0;
+            padding: 15rpx 20rpx;
+            font-size: 35rpx;
+            border: none;
+            line-height: 1.8em;
+            text-align: left;
+            background-color: transparent;   /*按钮透明*/  
+        }
+        .studyWord_Btn{
+            width: 30%;
+            margin: 30rpx 35%;
+            padding: 15rpx 20rpx;
+            font-size: 35rpx;
+            line-height: 1.8em;
+            text-align: center;
+            background-color: transparent;   /*按钮透明*/ 
+        }
+    }
+    .studyWord_rightAnswer{
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 420rpx;
+        .word_rightAnswer{
+            font-size: 36rpx;
+            line-height: 1.8em;
+            text-align: center;
+            margin-bottom: 170rpx;
+        }
+        .studyWord_Btn {
+            width: 30%;
+            margin: 30rpx 35%;
+            padding: 15rpx 20rpx;
+            font-size: 35rpx;
+            line-height: 1.8em;
+            text-align: center;
+            background-color: transparent;   /*按钮透明*/ 
+        }
+    }
+    
+}

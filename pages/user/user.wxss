@@ -1,0 +1,155 @@
+/* pages/user/user.wxss */
+.user_header {
+  height: 45vh;
+  background-color: #d6cfe2;
+  overflow: hidden;
+  position: relative;
+}
+.user_header .user_InfoHeader {
+  position: relative;
+}
+.user_header .user_InfoHeader .user_img {
+  height: 45vh;
+  filter: blur(10px);
+}
+.user_header .user_InfoHeader .user_info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25%;
+  text-align: center;
+}
+.user_header .user_InfoHeader .user_info .user_photo {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_header .user_InfoHeader .user_info .user_nickName {
+  color: seashell;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+}
+.user_header .user_loginBtn .user_defaultPhoto {
+  height: 45vh;
+  filter: blur(15px);
+}
+.user_header .user_loginBtn .loginBtn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  background-color: #3bcece;
+  color: white;
+  padding: 30rpx;
+  border-radius: 21px;
+  width: 340rpx;
+  height: 80rpx;
+}
+.user_header .user_loginBtn .loginBtn .wx-loginBtn {
+  font-size: 26rpx;
+  font-weight: lighter;
+  text-align: center;
+  vertical-align: center;
+  /**垂直居中*/
+  justify-content: center;
+  /**内容居中*/
+}
+view.user_content {
+  font-size: 30rpx;
+  position: relative;
+}
+view.user_content view.userSetting {
+  padding-bottom: 100rpx;
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+view.user_content view.userSetting view.user_signIn {
+  background-color: #fff;
+  display: flex;
+}
+view.user_content view.userSetting view.user_signIn view.signIn_content {
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+view.user_content view.userSetting view.user_signIn view.signIn_content view.his_num {
+  color: #5fd7d7;
+}
+view.user_content view.userSetting view.user_signIn view.signIn_content view.his_text {
+  margin-top: 7rpx;
+  color: #b1b1b1;
+}
+view.user_content view.userSetting view.user_study {
+  background-color: white;
+  margin-top: 30rpx;
+  color: #666666;
+}
+view.user_content view.userSetting view.user_study view.user_study_title {
+  border-bottom: 3rpx solid #efefef;
+  padding: 13rpx 20rpx;
+}
+view.user_content view.userSetting view.user_study view.user_study_settings view.user_study_item {
+  margin-top: 10rpx;
+  padding: 13rpx 20rpx;
+  border-bottom: 3rpx solid #efefef;
+  display: flex;
+  justify-content: space-between;
+}
+view.user_content view.userSetting view.user_study view.user_study_settings view.user_study_item .user_wordsBook {
+  color: #3bcece;
+  width: 100rpx;
+  border: #3bcece 3rpx solid;
+  border-radius: 15px;
+  text-align: center;
+  padding: 5rpx 0;
+}
+view.user_content view.userSetting view.user_study view.user_study_settings view.user_study_item .user_remindTime {
+  color: #3bcece;
+  width: 100rpx;
+  border: #3bcece 3rpx solid;
+  border-radius: 15px;
+  text-align: center;
+  padding: 5rpx 0;
+}
+view.user_content view.userSetting view.user_study view.user_study_settings view.user_study_item .user_setWordNum {
+  color: #3bcece;
+  width: 100rpx;
+  border: #3bcece 3rpx solid;
+  border-radius: 15px;
+  text-align: center;
+}
+view.user_content view.userSetting view.user_others {
+  background-color: white;
+  margin-top: 30rpx;
+  color: #666666;
+}
+view.user_content view.userSetting view.user_others view.user_others_item {
+  padding: 13rpx 20rpx;
+  border-bottom: 3rpx solid #efefef;
+}
+view.user_content view.userSetting view.user_others view.app_contact {
+  display: flex;
+  justify-content: space-between;
+}
+view.user_content view.userSetting view.user_exit {
+  margin-top: 30rpx;
+  color: #666666;
+}
+view.user_content view.userSetting view.user_exit button.user_exit_item {
+  background-color: white;
+  font-weight: lighter;
+  padding: 20rpx 20rpx;
+  font-size: 30rpx;
+}
+view.user_content view.userSetting view.user_recommend {
+  margin-top: 45rpx;
+}
+view.user_content view.userSetting view.user_recommend button.user_recommend_item {
+  color: #40a9aa;
+  background-color: white;
+  padding: 20rpx 20rpx;
+  font-size: 32rpx;
+}

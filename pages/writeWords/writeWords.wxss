@@ -1,0 +1,70 @@
+page {
+  background-color: white;
+}
+page .shadow_normol {
+  box-shadow: 0 0 10rpx #efefef;
+}
+.page_index {
+  width: 90%;
+  height: 30vm;
+  margin: 20rpx 5%;
+}
+.page_index .writeWord_title {
+  display: flex;
+}
+.page_index .writeWord_title .writeWord_title_item {
+  flex: 1;
+}
+.page_index .writeWord_title .writeWord_title_item .gradeNum_write {
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.page_index .writeWord_title .writeWord_title_item .gradeText_write {
+  font-size: 35rpx;
+}
+.page_index .writeWord_title .strangeGrade_write {
+  text-align: left;
+  padding-left: 20rpx;
+}
+.page_index .writeWord_title .knowGrade_write {
+  text-align: center;
+}
+.page_index .writeWord_title .familiarGrade_write {
+  text-align: right;
+  padding-right: 20rpx;
+}
+.page_index .writeNext {
+  margin-top: 30rpx;
+  height: 100rpx;
+  background-color: #3ccfcf;
+  color: white;
+  font-size: 40rpx;
+  line-height: 42rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.page_index .writeNext .startStudy_Btn {
+  line-height: 2.5em;
+}
+.page_index .writeWordsList {
+  width: 95%;
+  padding-bottom: 100rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 100rpx;
+  margin: 15rpx 0;
+}
+.page_index .writeWordsList .wordItem {
+  margin: 30rpx 0;
+  padding: 15rpx 30rpx;
+  font-size: 33rpx;
+  border: #dedede 2rpx solid;
+  color: #6a7579;
+}
+.page_index .writeWordsList .wordItem .wordItem_word_English {
+  margin-bottom: 15rpx;
+}
+.page_index .writeWordsList .wordItem .wordItem_word_Chinese {
+  line-height: 1.8em;
+}

@@ -1,0 +1,34 @@
+<!--pages/writeWords/writeWords.wxml-->
+<view class="page_index">
+  <view class="writeWord_title">
+    <view class="strangeGrade_write writeWord_title_item">
+        <view class="gradeNum_write web-font">{{strangeGradeNum_write}}</view>
+        <view class="gradeText_write">陌生</view>
+    </view>
+    <view class="knowGrade_write writeWord_title_item">
+        <view class="gradeNum_write  web-font">{{knowGradeNum_write}}</view>
+        <view class="gradeText_write">认识</view>
+    </view>
+    <view class="familiarGrade_write writeWord_title_item">
+        <view class="gradeNum_write  web-font">{{familiarGradeNum_write}}</view>
+        <view class="gradeText_write">熟悉</view>
+    </view>
+  </view>
+  <view class="writeNext">
+      <navigator class="startStudy shadow" url="/pages/writeWords_content/writeWords_content">
+            <view class="startStudy_Btn">
+                下一轮
+            </view>
+      </navigator> 
+  </view>
+  <view class="writeWordsList">
+      <navigator class="wordItem shadow_normol" 
+                  url="/pages/wordDetails/wordDetails"
+                  wx:for="{{words_thisBook}}" wx:key="{{item.id}}"
+                  style='color:{{item.degree_familiarity==0?"#ff8e7c":item.degree_familiarity==1?"#6a7579":"#23b26d"}}' 
+                  >
+          <view class="wordItem_word_English">{{item.word}}</view>
+          <view class="wordItem_word_Chinese">{{item.interpretation}}</view>
+      </navigator>  
+  </view>
+</view>

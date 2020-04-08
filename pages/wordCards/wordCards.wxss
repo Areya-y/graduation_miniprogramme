@@ -1,0 +1,112 @@
+/* pages/wordCards/wordCards.wxss */
+page {
+  background-color: white;
+}
+page .color_green {
+  color: #23b26d;
+}
+page .color_grey {
+  color: #97a5aa;
+}
+page .color_yellow {
+  color: #fecc1e;
+}
+page .bg_color_blue {
+  background-color: #4257b2;
+}
+page .bg_color_small_blue {
+  background-color: #a0abd9;
+}
+page .shadow_normol {
+  box-shadow: 0 0 10rpx #efefef;
+}
+page .shadow_large {
+  box-shadow: 15px 0 15px -15px #dedede, -15px 0 15px -15px #dedede;
+}
+page .border_normol {
+  border-bottom: solid 13rpx #97a5aa;
+}
+page .border_green {
+  border-bottom: solid 13rpx #23b26d;
+}
+.page_index .page_bgImg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1;
+  filter: opacity(15%);
+}
+.page_index .body-main-box {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+}
+.page_index .body-swiper {
+  width: 680rpx;
+  height: 450rpx;
+  left: 50%;
+  position: absolute;
+  margin-left: -340rpx;
+  z-index: 3;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  border-radius: 12px;
+}
+.page_index .body-swiper2 {
+  width: 640rpx;
+  height: 450rpx;
+  left: 50%;
+  position: absolute;
+  margin-left: -320rpx;
+  z-index: 2;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  border-radius: 12px;
+}
+.page_index .body-swiper3 {
+  width: 605rpx;
+  height: 450rpx;
+  left: 50%;
+  position: absolute;
+  margin-left: -302.5rpx;
+  z-index: 1;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  border-radius: 12px;
+}
+.page_index .body-container {
+  width: 100%;
+  height: 450rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+.page_index .body-container .word_collect {
+  height: 60rpx;
+  font-size: 60rpx;
+  text-align: end;
+  padding: 10rpx 50rpx;
+}
+.page_index .body-container .word_eng {
+  font-size: 60rpx;
+  font-weight: bold;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 140rpx;
+}
+.page_index .body-container .word_cna {
+  font-size: 40rpx;
+  font-weight: bold;
+  height: 40rpx;
+  line-height: 50rpx;
+  margin-top: 170rpx;
+}

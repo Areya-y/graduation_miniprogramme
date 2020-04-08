@@ -1,0 +1,86 @@
+/* pages/wordDetails/wordDetails.less */
+page{
+  .color_yellow{
+    color: #fecc1e;
+  }
+}
+.page_index {
+    width: 95%;
+    // background-color: salmon;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top:20rpx;
+    .wordDetails_head {
+        // position: absolute;
+        height: 8vh;
+        // background-color: #fff;
+        margin:15rpx;
+      .word_title{
+        .word_english {
+          color: #3cced6;
+          padding-left: 10rpx;
+          font-size: 70rpx;
+          
+        }
+        .word_collect{
+          padding-right: 25rpx;
+          font-size: 60rpx;
+        }
+      }
+      
+      .word_Phonogram {
+        margin:15rpx;
+        color: #747575;
+        padding-left: 20rpx;
+        font-size: 40rpx;
+      }
+    }
+  
+    .wordDetails_meaning {
+      // width: 95%;
+      background-color: white;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      top:70rpx;
+      box-shadow: 15px 0 15px -15px #cacaca, -15px 0 15px -15px #cacaca;
+      // box-shadow: 0rpx 30rpx 120rpx 0rpx;
+      .wordDetails_meaning_list{
+         padding: 5rpx 20rpx 15rpx 20rpx;
+          .word_detailedMeaning {
+            font-size: 37rpx;
+            margin-top: 15rpx;
+            line-height: 1.5em;
+        }
+      }
+    }
+  
+    .wordDetails_example {
+      background-color: white;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      top:120rpx;
+      box-shadow: 15px 0 15px -15px #cacaca, -15px 0 15px -15px #cacaca;
+      margin-bottom: 200rpx;
+      .examples {
+        font-size: 37rpx;
+        padding: 5rpx 20rpx 20rpx 20rpx;
+        .example_eng {
+          font-size:37rpx;
+          margin-top: 15rpx;
+          line-height: 1.7em;
+        }
+  
+        .example_meaning {
+          margin-top: 15rpx;
+          
+          line-height: 1.7em;
+          color: #666666;
+          font-size: 36rpx;
+          padding-left: 15rpx;
+        }
+      }
+    }
+  }

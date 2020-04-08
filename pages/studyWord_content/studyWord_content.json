@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "学习",
+  "usingComponents": {
+    "van-row": "vant-weapp//row"
+  }
+}

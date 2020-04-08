@@ -1,0 +1,88 @@
+/* pages/wordBook/wordBook.less */
+.page_index .wordBook_head {
+  height: 20vh;
+  background-color: #ffffff;
+  position: relative;
+}
+.page_index .wordBook_head .wordBook_content {
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+}
+.page_index .wordBook_head .wordBook_content .wordBook_name {
+  font-size: 40rpx;
+  font-weight: bold;
+  border-right: 2rpx #dcdcdc solid;
+  color: #445456;
+  padding: 15rpx 30rpx 15rpx 15rpx;
+}
+.page_index .wordBook_head .wordBook_content .wordBook_number {
+  font-size: 30rpx;
+  color: #9ba2a6;
+  padding-left: 30rpx ;
+  font-weight: bold;
+}
+.page_index .wordBook_functions {
+  display: flex;
+  width: 95%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 130rpx;
+}
+.page_index .wordBook_functions .wordBookBtn {
+  width: 31%;
+  height: 15vh;
+  font-size: 33rpx;
+  background-color: #fff;
+  border-bottom: solid 8rpx #3cced6;
+  margin-right: 20rpx;
+  margin-left: 10rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+.page_index .wordBook_functions .wordBookBtn .wordBook_icon {
+  margin-top: 2vh;
+  height: 3vh;
+  color: #4256aa;
+  font-size: 50rpx;
+}
+.page_index .wordBook_functions .wordBookBtn .wordBook_text {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  height: 4vh;
+  text-align: center;
+  color: #4a5151;
+  font-weight: bold;
+}
+.page_index .wordBook_functions .wordBookBtn .study_icon {
+  font-weight: bold;
+}
+.page_index .wordBook_words {
+  width: 93%;
+  padding-bottom: 100rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 340rpx;
+}
+.page_index .wordBook_words .wordBook_words_head {
+  color: #4c5155;
+  padding-left: 15rpx;
+  font-weight: bold;
+}
+.page_index .wordBook_words .wordBook_wordList {
+  margin: 15rpx 0;
+}
+.page_index .wordBook_words .wordBook_wordList .wordBook_wordItem {
+  background-color: #fff;
+  margin: 30rpx 0;
+  padding: 15rpx 30rpx;
+  font-size: 30rpx;
+  box-shadow: 15px 0 15px -15px #cacaca, -15px 0 15px -15px #cacaca;
+}
+.page_index .wordBook_words .wordBook_wordList .wordBook_wordItem .wordBook_word_English {
+  margin-bottom: 15rpx;
+}
+.page_index .wordBook_words .wordBook_wordList .wordBook_wordItem .wordBook_word_Chinese {
+  line-height: 1.8em;
+}

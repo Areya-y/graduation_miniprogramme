@@ -1,0 +1,122 @@
+
+.page_index{
+    position: relative;
+    .searchWord_background{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-size: 100% 100%;
+        z-index: -1;
+        -webkit-filter: opacity(50%);
+        filter: opacity(50%);
+    }
+    .searchWord{
+        position: relative;
+        padding: 12px 9rpx;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        
+        -webkit-text-size-adjust: 100%;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        .searchWordRow{
+            position: relative;
+            -webkit-box-flex: 1;
+            -webkit-flex: auto;
+            flex: auto;
+            border-radius: 4px;
+            background: #fff;
+            .searchWord__box{
+                position: relative;
+                padding-left: 32px;
+                padding-right: 32px;
+                width: 100%;
+                box-sizing: border-box;
+                z-index: 1;
+                .search_in-box{
+                    position: absolute;
+                    left: 12px;
+                    top: 50%;
+                    margin-top: -8px
+                }
+                .searchWord__input{
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: 30rpx;
+                    caret-color: #07c160
+                }
+            }
+            .searchWord__label{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                border-radius: 4px;
+                text-align: center;
+                color: rgba(0, 0, 0, .5);
+                background: #fff;
+                line-height: 32px;
+                border: 3rpx solid #ededed;
+                .search{
+                    margin-right: 8px;
+                    font-size: 30rpx;
+                    vertical-align: top;
+                    margin-top: .64em;
+                    height: 1em;
+                    line-height: 1em
+                }
+                .searchWord__text{
+                display: inline-block;
+                font-size: 30rpx;
+                vertical-align: top
+                }
+            }
+            .clear{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                padding: 0 12px;
+                font-size: 0;
+                &:after {
+                    content: "";
+                    height: 100%;
+                    vertical-align: middle;
+                    display: inline-block;
+                    width: 0;
+                    overflow: hidden
+                }
+            }
+        }
+        .cancelButton{
+            margin-left: 8px;
+            line-height: 32px;
+            color: #576b95;
+            white-space: nowrap
+        }
+    }
+    .searchContent{
+        margin: 10rpx 9rpx 0rpx 9rpx;
+        .searchItem{
+            height: 80rpx;
+            background-color: #fff;
+            font-size: 30rpx;
+            padding: 15rpx ;
+            border-bottom: 1rpx solid #ccc;
+            width: 100%;
+            overflow: hidden;
+            // 空格不换行
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}

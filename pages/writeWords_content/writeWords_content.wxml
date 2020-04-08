@@ -1,0 +1,30 @@
+<!--pages/writeWords_content/writeWords_content.wxml-->
+<view class="page_index">
+    <image class="page_bgImg" src="https://s1.ax1x.com/2020/03/19/8swirR.jpg"/>
+    <view class="writeWords_progress padding">
+        <view class="cu-progress round sm striped active bg_color_small_blue">
+            <view class="bg_color_blue" style="width:{{rate_word}};"></view>
+        </view>
+    </view>
+    <view class="word_interpretation web-font">
+        {{words_thisBook[index].interpretation}}
+    </view>
+    <view class="writeWord_input">
+        <van-cell-group class="padding writeWord_input_context">
+            <van-field
+                value="{{ message }}"
+                clearable
+                right-icon="arrow"
+                right-icon-class="custom-icon"
+                bind:click-icon="nextWord"
+                type="textarea"
+                placeholder="输入答案"
+                rows="1"
+                autosize
+                error-message="{{error_msg}}"
+                border="{{ false }}"
+            />
+        </van-cell-group>
+    </view>
+</view>
+

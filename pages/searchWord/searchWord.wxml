@@ -1,0 +1,64 @@
+<view class="page_index">
+    <image class='searchWord_background' src="https://s1.ax1x.com/2020/03/19/8sGlS1.png" />
+    <view class="searchWord">
+        <view class="searchWordRow">
+            <view class="searchWord__box">
+                <icon class="search_in-box" type="search" size="14"></icon>
+                <input type="text" 
+                    class="searchWord__input"
+                    placeholder="输入查找内容" 
+                    value="{{inputVal}}" 
+                    focus="{{inputShowed}}" 
+                    bindinput="inputTyping" 
+                />
+                <view class="clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
+            </view>
+            <label class="searchWord__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="search" type="search" size="14"></icon>
+                <view class="searchWord__text">搜索</view>
+            </label>
+        </view>
+        <view class="cancelButton" hidden="{{!inputShowed}}" bindtap="cancelInput">
+            取消
+        </view>
+    </view>
+    <view class="searchContent" wx:if="{{inputVal.length > 0}}">
+        <navigator url="/pages/wordDetails/wordDetails" >
+            <view class="searchItem">
+                <text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae, iusto nobis vel, cupiditate nam fuga modi deleniti sit eos ipsam sequi. Sit pariatur ipsam officia suscipit perferendis, distinctio excepturi.
+                </text>
+            </view>
+        </navigator>
+        
+        <navigator url="" >
+            <view class="searchItem">
+                <text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae, iusto nobis vel, cupiditate nam fuga modi deleniti sit eos ipsam sequi. Sit pariatur ipsam officia suscipit perferendis, distinctio excepturi.
+                </text>
+            </view>
+        </navigator>
+        
+        <navigator url="" >
+            <view class="searchItem">
+                <text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae, iusto nobis vel, cupiditate nam fuga modi deleniti sit eos ipsam sequi. Sit pariatur ipsam officia suscipit perferendis, distinctio excepturi.
+                </text>
+            </view>
+        </navigator>
+        
+        <navigator url="" >
+            <view class="searchItem">
+                <text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae, iusto nobis vel, cupiditate nam fuga modi deleniti sit eos ipsam sequi. Sit pariatur ipsam officia suscipit perferendis, distinctio excepturi.
+                </text>
+            </view>
+        </navigator>
+        
+    </view>     
+</view>
+
+
+  

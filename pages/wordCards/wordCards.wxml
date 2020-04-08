@@ -1,0 +1,63 @@
+<!--pages/wordCards/wordCards.wxml-->
+<view class="page_index">
+    <image class="page_bgImg" src="https://s1.ax1x.com/2020/03/19/8swirR.jpg"/>
+    <view class="writeWords_progress padding">
+        <view class="cu-progress  round sm striped active bg_color_small_blue">
+            <view class="bg_color_blue" style="width:{{rate_word}};"></view>
+        </view>
+    </view>
+    <view class="body-main-box">
+        <!-- 第一张 -->
+        <view class="body-swiper" bindtouchstart="touchstart1" bindtouchend="touchend1" style="z-index:{{index1}};top:{{ballTop1}}rpx;  margin-left:{{ballLeft1}}rpx;width:{{ballWidth1}}rpx;" animation="{{animationData1}}">
+            <!-- 正面 -->
+            <block wx:if="{{isFront1}}">
+                <view class="body-container" >
+                    <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
+                    <view class="word_eng">
+                         {{words_thisBook[index].word}}
+                    </view>
+                </view>
+            </block>
+            <!-- 反面 -->
+            <block wx:else>
+                <view class="body-container">
+                    <view class="word_cna"> {{words_thisBook[index].interpretation}}</view>
+                </view>
+            </block>
+        </view>
+        <!-- 第二张 -->
+        <view class="body-swiper2" bindtouchstart="touchstart2" bindtouchend="touchend2" style="z-index:{{index2}};top:{{ballTop2}}rpx;margin-left:{{ballLeft2}}rpx;width:{{ballWidth2}}rpx;" animation="{{animationData2}}">
+            <!-- 正面 -->
+            <block wx:if="{{isFront2}}">
+            <view class="body-container" >
+                <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
+                <view class="word_eng"> {{words_thisBook[index].word}}</view>
+            </view>
+            </block>
+            <!-- 反面 -->
+            <block wx:else>
+            <view class="body-container">
+                <view class="word_cna"> {{words_thisBook[index].interpretation}}</view>
+            </view>
+            </block>
+        </view>
+        <!-- 第三张 -->
+        <view class="body-swiper3" bindtouchstart="touchstart3" bindtouchend="touchend3" style="z-index:{{index3}};top:{{ballTop3}}rpx;  margin-left:{{ballLeft3}}rpx;width:{{ballWidth3}}rpx;" animation="{{animationData3}}">
+            <!-- 正面 -->
+            <block wx:if="{{isFront3}}">
+            <view class="body-container" >
+                <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
+                <view class="word_eng">{{words_thisBook[index].word}}</view>
+            </view>
+            </block>
+            <!-- 反面 -->
+            <block wx:else>
+            <view class="body-container">
+               <view class="word_cna"> {{words_thisBook[index].interpretation}}</view>
+            </view>
+            </block>
+        </view>
+    </view>
+</view>
+
+

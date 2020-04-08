@@ -1,0 +1,63 @@
+<!--pages/selfStudyRoom_index/selfStudyRoom_index.wxml-->
+<view class="page_index">
+    <image class='studyRoom_background' src="https://s1.ax1x.com/2020/03/15/88IAhQ.png" ></image>
+    <view class="studyRoom_page">
+        <view class="studyRoom_page_title">
+            <scroll-view scroll-x class="page_title_content  nav text-center">
+                <view class="page_title_item {{0==TabCur?'page_title_item_selected ':''}}" bindtap="tabSelect" data-id="0">
+                考研自习室
+                </view>
+                <view class="page_title_item {{1==TabCur?'page_title_item_selected ':''}}" bindtap="tabSelect" data-id="1">
+                全球排行榜
+                </view>
+            </scroll-view>
+        </view>
+        <view class="studyRoom_page_content">
+            <view wx:if="{{0==TabCur}}" class="selfStudyRoom_ranking">
+                <view wx:if="{{0==isUserHaveStudyRoom}}" class="studyRoom_page_none">
+                     <view class="studyRoom_creat">
+                        <button class="studyRoom_creat_btn cu-btn icon">
+                        创建自习室
+                        </button>
+                     </view>
+                    <view class="studyRoom_join">
+                        <button class="studyRoom_join_btn cu-btn icon">
+                        加入自习室
+                        </button>
+                    </view>
+                    <view class="studyRoom_bottom">
+                        <view class="iconfont iconjiayou studyRoom_bottom_text">
+                            考研英语冲冲冲！！！
+                        </view>
+                    </view>
+                </view>
+               <view wx:else class="studyRoom_userHave shadow-warp">
+                    <view class="ScoreRank_list">
+                        <view class="ScoreRank_item"  wx:for="{{4}}" wx:key  data-target="move-box-{{index}}">
+                        <view class="ScoreRank_userNumber text-grey">{{item+1}}</view>
+                        <view class="ScoreRank_userHead" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view>
+                        <view class="ScoreRank_userName">晨晨</view>
+                        <view class="ScoreRank_userScore">66666
+                        </view>
+                    </view>
+                </view>
+               </view>
+                
+            </view>
+            <view wx:else class="wechat_ranking shadow-warp">
+                <view class="wechatRank_list">
+                    <view class="wechatRank_item"  wx:for="{{4}}" wx:key  data-target="move-box-{{index}}">
+                    <view class="wechatRank_userNumber text-grey">{{item+1}}</view>
+                    <view class="wechatRank_userHead" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view>
+                    <view class="wechatRank_userName">Areya_</view>
+                    <view class="wechatRank_userScore">4476
+                    </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+

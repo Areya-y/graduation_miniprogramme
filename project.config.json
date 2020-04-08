@@ -1,0 +1,161 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.2",
+	"appid": "wxb33d8964a4bc109d",
+	"projectname": "%E9%A1%B9%E7%9B%AE",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "查询单词",
+					"pathName": "pages/searchWord/searchWord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页（考研倒计时）",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "自习室",
+					"pathName": "pages/selfStudyRoom_index/selfStudyRoom_index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "单词集",
+					"pathName": "pages/selectWordBooks/selectWordBooks",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "单词书",
+					"pathName": "pages/wordBook/wordBook",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "单词详情",
+					"pathName": "pages/wordDetails/wordDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "测试",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "学习单词",
+					"pathName": "pages/studyWord/studyWord",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "开始学习单词",
+					"pathName": "pages/studyWord_content/studyWord_content",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "书写单词",
+					"pathName": "pages/writeWords/writeWords",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "开始默写单词",
+					"pathName": "pages/writeWords_content/writeWords_content",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "单词卡片",
+					"pathName": "pages/wordCards/wordCards",
+					"scene": null
+				}
+			]
+		}
+	}
+}

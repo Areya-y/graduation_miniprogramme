@@ -1,0 +1,171 @@
+<!--pages/selectWordBooks/selectWordBooks.wxml-->
+<view class="page_index">
+    <image class='selectWordBooks_background' src="https://s1.ax1x.com/2020/03/19/8swirR.jpg" />
+    <view class="selectWordBooks_nav">
+        <scroll-view scroll-x class="selectWordBooks_nav_scroll">
+            <view class="selectWordBooks_nav_item {{index==TabCur?'selectWordBooks_nav_selected':''}}" 
+                wx:for="{{wordBook_categorys}}" wx:key="id" bindtap="tabSelect" data-id="{{item.id}}">
+                {{item.value}}
+            </view>
+        </scroll-view>
+    </view>
+    <view class="selectWordBooks_content">
+        <view wx:if="{{0==TabCur}}" class="basicWords_books">
+            <view class="wordBooks_unfinished">
+                <view class="wordBooks_list">
+                    <view class="wordBooks_head">
+                        未完成
+                    </view>
+                    <view class="wordBooks">
+                        <navigator class="wordBooks_item shadow" 
+                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
+                            <view class="wordBook_name " >
+                                基础{{item.value}}
+                            </view>
+                            <view class="wordBook_number ">
+                                50条单词
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+            <view class="wordBooks_finished">
+                <view class="wordBooks_list">
+                    <view class="wordBooks_head">
+                        已完成
+                    </view>
+                    <view class="wordBooks">
+                        <navigator class="wordBooks_item shadow" 
+                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
+                            <view class="wordBook_name " >
+                                基础{{item.value}}
+                            </view>
+                            <view class="wordBook_number ">
+                                50条单词
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view wx:elif="{{1==TabCur}}" class="importantWords_books">
+            <view class="wordBooks_unfinished">
+                <view class="wordBooks_list">
+                    <view class="wordBooks_head">
+                        未完成
+                    </view>
+                    <view class="wordBooks">
+                        <navigator class="wordBooks_item shadow" 
+                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
+                            <view class="wordBook_name " >
+                                重要{{item.value}}
+                            </view>
+                            <view class="wordBook_number ">
+                                50条单词
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+            <view class="wordBooks_finished">
+                <view class="wordBooks_list">
+                    <view class="wordBooks_head">
+                        已完成
+                    </view>
+                    <view class="wordBooks">
+                        <navigator class="wordBooks_item shadow" 
+                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
+                            <view class="wordBook_name " >
+                                重要{{item.value}}
+                            </view>
+                            <view class="wordBook_number ">
+                                50条单词
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+ 
+        </view>
+        <view wx:elif="{{2==TabCur}}" class="highFrequencyWords_books">
+            <view class="wordBooks_unfinished">
+                <view class="wordBooks_list">
+                    <view class="wordBooks_head">
+                        未完成
+                    </view>
+                    <view class="wordBooks">
+                        <navigator class="wordBooks_item shadow" 
+                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
+                            <view class="wordBook_name " >
+                                高频{{item.value}}
+                            </view>
+                            <view class="wordBook_number ">
+                                50条单词
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+            <view class="wordBooks_finished">
+                <view class="wordBooks_list">
+                    <view class="wordBooks_head">
+                        已完成
+                    </view>
+                    <view class="wordBooks">
+                        <navigator class="wordBooks_item shadow" 
+                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
+                            <view class="wordBook_name " >
+                                高频{{item.value}}
+                            </view>
+                            <view class="wordBook_number ">
+                                50条单词
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+ 
+        </view>
+        <view wx:else class="hardWords_books">
+            <view class="wordBooks_unfinished">
+                <view class="wordBooks_list">
+                    <view class="wordBooks_head">
+                        未完成
+                    </view>
+                    <view class="wordBooks">
+                        <navigator class="wordBooks_item shadow" 
+                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
+                            <view class="wordBook_name " >
+                                难点{{item.value}}
+                            </view>
+                            <view class="wordBook_number ">
+                                50条单词
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+            <view class="wordBooks_finished">
+                <view class="wordBooks_list">
+                    <view class="wordBooks_head">
+                        已完成
+                    </view>
+                    <view class="wordBooks">
+                        <navigator class="wordBooks_item shadow" 
+                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
+                            <view class="wordBook_name " >
+                                难点{{item.value}}
+                            </view>
+                            <view class="wordBook_number ">
+                                50条单词
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+ 
+        </view>
+        
+    </view>
+</view>
+<!-- navigator -->

@@ -1,0 +1,32 @@
+<!--pages/wordDetails/wordDetails.wxml-->
+<view class="page_index">
+    <view class="wordDetails_head">
+        <view class="word_title flex justify-between">
+            <view class="word_english">
+                {{word}}
+            </view>    
+            <view class="word_collect iconfont {{isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
+            
+        </view>
+        <view class="word_Phonogram">
+            {{phonogram}}
+        </view>
+    </view>
+    <view class="wordDetails_meaning">
+        <view class="wordDetails_meaning_list">
+            <view class="word_detailedMeaning" wx:for="{{interpretation}}" wx:key="{{item.id}}">
+                {{item.id}}  {{item.value}}
+            </view>
+        </view>
+    </view>
+    <view class="wordDetails_example">
+        <view class="examples" wx:for="{{examples}}" wx:key="{{item.English}}">
+            <view class="example_eng iconfont iconhandoup">
+                {{item.English}}
+            </view>
+            <view class="example_meaning">
+                {{item.meaning}}
+            </view>
+        </view>
+    </view>
+</view>

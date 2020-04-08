@@ -1,0 +1,78 @@
+<!--pages/user/user.wxml-->
+<view class="user_header">
+    <view  wx:if="{{userInfo.avatarUrl}}" class="user_InfoHeader">
+        <image class="user_img" src="{{userInfo.avatarUrl}}" />
+        <view class="user_info">
+            <image class="user_photo" src="{{userInfo.avatarUrl}}" />
+            <view class="user_nickName">{{userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view  wx:else class="user_loginBtn">
+        <image class="user_defaultPhoto" src="https://s2.ax1x.com/2020/03/08/3zQlM6.jpg" />
+        <view class="loginBtn">
+            <navigator class="iconfont iconweixin wx-loginBtn" url="/pages/login/login" >    微信登录</navigator>
+        </view>
+    </view>
+</view>
+<view class="user_content">
+  <view class="userSetting">
+      <view class="user_signIn">
+        <view class="continuousSign signIn_content">
+            <view class="his_num">0</view>
+            <view class="his_text">连续签到</view>
+        </view>
+        <view class="cumulativeSign signIn_content">
+            <view class="his_num">0</view>
+            <view class="his_text">累计签到</view>
+        </view>
+        <view class="maximumContinuous signIn_content">
+            <view class="his_num">0</view>
+            <view class="his_text">最大连续</view>
+        </view>
+      </view>
+      <view class="user_study">
+        <view class="user_study_title">
+          学习设置
+        </view>
+        <view class="user_study_settings">
+          <view class="user_study_item">
+            <text >我的单词册</text>
+            <picker class="user_wordsBook" mode="selector" value="{{user_wordsBook}}"  range="{{array_wordsBook}}" bindchange="handleSelectWordsBook">
+                 <view>{{array_wordsBook[user_wordsBook]}}</view>
+            </picker>
+          </view>
+          <view class="user_study_item">
+            <text >每日复习提醒时间</text>
+            <picker class="user_remindTime" mode="time" value="{{tiremindTimeme}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+                 <view>{{remindTime}}</view>
+            </picker>
+          </view>
+          <view class="user_study_item">
+            <text >设置单词小册的单词数</text>
+            <input class="user_setWordNum" value="{{user_wordNum}}" type="number" bindinput="handleSetWordNum"/>
+          </view>
+        </view>
+      </view>
+      <view class="user_others">
+          <view class="user_others_item">
+             <navigator  url="/pages/newWords_notebook/newWords_notebook" >我的生词本</navigator>
+          </view>
+          <view class="user_others_item app_contact">
+            <text >联系客服</text>
+            <text selectable="true">177XXXX2504</text>
+          </view>
+          
+      </view>
+      <view class="user_exit">
+        <button class="user_exit_item" bindExit="handleExit">
+            退出
+        </button>
+      </view>
+      <view class="user_recommend">
+        <button open-type="share" class="user_recommend_item">
+            <text class="cuIcon-upload"></text> 把应用推荐给别人
+        </button>
+      </view>
+      
+  </view>
+</view>
