@@ -27,8 +27,10 @@
             <navigator class="wordBook_wordItem shadow-blur" url="/pages/wordDetails/wordDetails"
             wx:for="{{wordsList}}" wx:key="{{item.id}}">
                 <view class="wordBook_word_English">{{item.word}}</view>
-                <view class="wordBook_word_Chinese">{{item.interpretation}}</view>
-            </navigator>    
+                <view wx:for="{{item.interpretation}}" wx:for-item="item_in" wx:for-index="index_in" class="wordBook_word_Chinese">
+                    {{item_in}}
+                </view>
+            </navigator>
         </view>
     </view>
 </view>
