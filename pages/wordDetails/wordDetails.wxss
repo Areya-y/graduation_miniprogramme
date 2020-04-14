@@ -28,6 +28,11 @@ page .color_yellow {
   padding-left: 20rpx;
   font-size: 40rpx;
 }
+.page_index .wordDetails_head .word_Phonogram .word_testRequency {
+  color: #747575;
+  padding-left: 20rpx;
+  font-size: 35rpx;
+}
 .page_index .wordDetails_meaning {
   background-color: white;
   position: relative;
@@ -44,14 +49,25 @@ page .color_yellow {
   margin-top: 15rpx;
   line-height: 1.5em;
 }
+.page_index .word_inflexion {
+  background-color: white;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110rpx;
+  box-shadow: 15px 0 15px -15px #cacaca, -15px 0 15px -15px #cacaca;
+  font-size: 32rpx;
+  padding: 20rpx;
+  line-height: 1.7em;
+}
 .page_index .wordDetails_example {
   background-color: white;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  top: 120rpx;
-  box-shadow: 15px 0 15px -15px #cacaca, -15px 0 15px -15px #cacaca;
+  top: 160rpx;
   margin-bottom: 200rpx;
+  box-shadow: 15px 0 15px -15px #cacaca, -15px 0 15px -15px #cacaca;
 }
 .page_index .wordDetails_example .examples {
   font-size: 37rpx;
@@ -59,11 +75,9 @@ page .color_yellow {
 }
 .page_index .wordDetails_example .examples .example_eng {
   font-size: 37rpx;
-  margin-top: 15rpx;
   line-height: 1.7em;
 }
 .page_index .wordDetails_example .examples .example_meaning {
-  margin-top: 15rpx;
   line-height: 1.7em;
   color: #666666;
   font-size: 36rpx;

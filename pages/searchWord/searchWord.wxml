@@ -25,38 +25,11 @@
         </view>
     </view>
     <view class="searchContent" wx:if="{{inputVal.length > 0}}">
-        <navigator url="/pages/wordDetails/wordDetails" >
-            <view class="searchItem">
-                <text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae, iusto nobis vel, cupiditate nam fuga modi deleniti sit eos ipsam sequi. Sit pariatur ipsam officia suscipit perferendis, distinctio excepturi.
-                </text>
-            </view>
-        </navigator>
-        
-        <navigator url="" >
-            <view class="searchItem">
-                <text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae, iusto nobis vel, cupiditate nam fuga modi deleniti sit eos ipsam sequi. Sit pariatur ipsam officia suscipit perferendis, distinctio excepturi.
-                </text>
-            </view>
-        </navigator>
-        
-        <navigator url="" >
-            <view class="searchItem">
-                <text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae, iusto nobis vel, cupiditate nam fuga modi deleniti sit eos ipsam sequi. Sit pariatur ipsam officia suscipit perferendis, distinctio excepturi.
-                </text>
-            </view>
-        </navigator>
-        
-        <navigator url="" >
-            <view class="searchItem">
-                <text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quae, iusto nobis vel, cupiditate nam fuga modi deleniti sit eos ipsam sequi. Sit pariatur ipsam officia suscipit perferendis, distinctio excepturi.
-                </text>
-            </view>
-        </navigator>
-        
+        <view class="searchItem" 
+            wx:for="{{wordsList}}" wx:key="id"
+            bindtap="jumpToWordDetails" data-index="{{index}}" >
+                {{item.word}}
+        </view>
     </view>     
 </view>
 

@@ -101,14 +101,14 @@
   white-space: nowrap;
 }
 .page_index .searchContent {
-  margin: 10rpx 9rpx 0rpx 9rpx;
+  margin: 10rpx 9rpx 100rpx 9rpx;
 }
 .page_index .searchContent .searchItem {
   height: 80rpx;
   background-color: #fff;
   font-size: 30rpx;
   padding: 15rpx ;
-  border-bottom: 1rpx solid #ccc;
+  border-bottom: 10rpx solid #f7f7f7;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;

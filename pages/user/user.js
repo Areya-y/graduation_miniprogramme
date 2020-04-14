@@ -7,10 +7,23 @@ Page({
 		user_wordsBook:1,
 		user_wordNum:50
 	},
-	onShow() {
+	onShow: function () {
 		const userInfo=wx.getStorageSync("userInfo");
 		this.setData({userInfo});
-	},
+	// 	let that = this;
+	// 	//身份校验
+	// 	service.identityCheck(() => {
+	// 		  //跳转到登录页
+	// 		  wx.redirectTo({
+	// 			url: "/pages/login/login"
+	// 		  });
+	// 		}, () => {    
+	// 		  //获取页面数据等等      
+	// 		  that.getDetail(this.data);
+	// 		//   ...
+	// 		}
+	//    );
+	  },
 	bindTimeChange: function (e) {
 		this.setData({
 			remindTime: e.detail.value

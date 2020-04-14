@@ -3,30 +3,36 @@
     <view class="wordDetails_head">
         <view class="word_title flex justify-between">
             <view class="word_english">
-                {{word}}
-            </view>    
+                {{word.word}}
+            </view>  
             <view class="word_collect iconfont {{isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
             
         </view>
         <view class="word_Phonogram">
-            {{phonogram}}
+           [{{word.soundMark}}]
+           <text class="word_testRequency" >历年真题中出现 <text style="color:black">{{word.testRequency}}</text> 次</text>
         </view>
     </view>
     <view class="wordDetails_meaning">
         <view class="wordDetails_meaning_list">
-            <view class="word_detailedMeaning" wx:for="{{interpretation}}" wx:key="{{item.id}}">
-                {{item.id}}  {{item.value}}
+            <view class="word_detailedMeaning" wx:for="{{word.interpretation}}" wx:key="{{item}}">
+                {{item}}
             </view>
         </view>
+    </view>
+    <view class="word_inflexion">
+        {{word.inflexion}}
     </view>
     <view class="wordDetails_example">
-        <view class="examples" wx:for="{{examples}}" wx:key="{{item.English}}">
-            <view class="example_eng iconfont iconhandoup">
-                {{item.English}}
+        <view class="examples" 
+            wx:for="{{word.sentences}}" wx:for-item="item" wx:for-index="index" wx:key="id">
+            <view wx:if="{{index%2==0}}" class="example_eng iconfont iconhandoup">
+                {{item}}
             </view>
-            <view class="example_meaning">
-                {{item.meaning}}
+            <view wx:else class="example_meaning">
+                {{item}}
             </view>
         </view>
     </view>
+    
 </view>

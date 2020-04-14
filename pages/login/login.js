@@ -17,7 +17,6 @@ Page({
 				
 				//调用后端，获取微信的session_key,secret
 				wx.request({
-					// url:"http://127.0.0.1:8080/xmut/wxLogin?code="+code,
 					url:"http://127.0.0.1:8080/xmut/wxLogin",
 					method: 'POST',
 					data: {
@@ -31,9 +30,9 @@ Page({
 						console.log(e.detail.errMsg)
 						
 						wx.setStorageSync("userInfo",userInfo);
-						// wx.navigateBack({
-						// 	delta:1
-						// });
+						wx.navigateBack({
+							delta:1
+						});
 					}
 				});
 			}
