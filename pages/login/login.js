@@ -1,13 +1,16 @@
 //Page Object
 Page({
 	data: {
+		userID:0
 	},
 	handleGetUserInfo(e){
+		var that=this
 		console.log(e.detail.errMsg)
 		console.log(e.detail.userInfo)
 		console.log(e.detail.rawData)
 		wx.login({
 			success: function (res) {
+				
 				console.log(res);
 				//获取登录的临时凭证
 				var code=res.code;
@@ -26,10 +29,28 @@ Page({
 					header: {
 						'content-type': 'application/x-www-form-urlencoded'
 					},
-					success: function (result) {
+					success: function (res) {
 						console.log(e.detail.errMsg)
+						console.log(res.data.userID);
+						
+						var userID=res.data.userID.userId
+						console.log(userID);
+						if (userID==null) {
+							var toastText='获取用户ID失败'+res.data.errMsg;
+							wx.showToast({
+								title: toastText,
+								icon: 'none',
+								duration: 2000,
+							});
+						}	else{
+							that.setData({
+								userID:userID
+							});
+						}
+						console.log(userID);
 						
 						wx.setStorageSync("userInfo",userInfo);
+						wx.setStorageSync("userID",userID);
 						wx.navigateBack({
 							delta:1
 						});

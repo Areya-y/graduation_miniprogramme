@@ -63,11 +63,11 @@
           </view>
           
       </view>
-      <view class="user_exit">
+      <!-- <view class="user_exit">
         <button class="user_exit_item" bindExit="handleExit">
             退出
         </button>
-      </view>
+      </view> -->
       <view class="user_recommend">
         <button open-type="share" class="user_recommend_item">
             <text class="cuIcon-upload"></text> 把应用推荐给别人
