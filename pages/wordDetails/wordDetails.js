@@ -1,7 +1,6 @@
 // pages/wordDetails/wordDetails.js
 Page({
 	data: {
-		isCollect:1,
 		word:{}
 	},
 	onLoad: function(options) {
@@ -14,9 +13,9 @@ Page({
 		});
 	  },
 	addCollect(){
-		if (this.data.isCollect==0) {
+		if (this.data.word.isCollect==0) {
 			this.setData({
-				isCollect:1
+				// word.isCollect:1
 			});
 			wx.showToast({
 				title: '收藏成功',

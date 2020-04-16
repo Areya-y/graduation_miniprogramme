@@ -31,8 +31,11 @@ Page({
 					user_wordsBook:res.data.wordBook,
 					user_wordNum:res.data.wordsNumPer
 				});
+				wx.setStorageSync("user_wordsBook",res.data.wordBook);
+				wx.setStorageSync("user_wordNum",res.data.wordsNumPer);
 			}
 		});
+		
 	},
 	bindTimeChange: function (e) {
 		var that=this
@@ -124,3 +127,4 @@ Page({
 	   }
    }
 })
+

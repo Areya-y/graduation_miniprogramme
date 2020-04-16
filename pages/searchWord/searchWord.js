@@ -22,6 +22,7 @@ Page({
         });
     },
     inputTyping: function (e) {
+        const userID=wx.getStorageSync("userID");
         var that=this
         var inputVal= e.detail.value
         console.log(e.detail.value)
@@ -40,7 +41,7 @@ Page({
                 inputVal: inputVal
             });
             wx.request({
-                url:"http://127.0.0.1:8080/xmut/searchword?word="+inputVal,
+                url:"http://127.0.0.1:8080/xmut/searchword?word="+inputVal+"&&userID="+userID,
                 method:'GET',
                 data:{},
                 success:function (res){

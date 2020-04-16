@@ -20,7 +20,7 @@
                         <navigator class="wordBooks_item shadow" 
                         wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
                             <view class="wordBook_name " >
-                                基础{{item.value}}
+                                高频{{item.value}}
                             </view>
                             <view class="wordBook_number ">
                                 50条单词
@@ -38,7 +38,7 @@
                         <navigator class="wordBooks_item shadow" 
                         wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
                             <view class="wordBook_name " >
-                                基础{{item.value}}
+                                高频{{item.value}}
                             </view>
                             <view class="wordBook_number ">
                                 50条单词
@@ -58,7 +58,7 @@
                         <navigator class="wordBooks_item shadow" 
                         wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
                             <view class="wordBook_name " >
-                                重要{{item.value}}
+                                中频{{item.value}}
                             </view>
                             <view class="wordBook_number ">
                                 50条单词
@@ -76,7 +76,7 @@
                         <navigator class="wordBooks_item shadow" 
                         wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
                             <view class="wordBook_name " >
-                                重要{{item.value}}
+                                中频{{item.value}}
                             </view>
                             <view class="wordBook_number ">
                                 50条单词
@@ -87,7 +87,7 @@
             </view>
  
         </view>
-        <view wx:elif="{{2==TabCur}}" class="highFrequencyWords_books">
+        <view wx:else class="highFrequencyWords_books">
             <view class="wordBooks_unfinished">
                 <view class="wordBooks_list">
                     <view class="wordBooks_head">
@@ -97,7 +97,7 @@
                         <navigator class="wordBooks_item shadow" 
                         wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
                             <view class="wordBook_name " >
-                                高频{{item.value}}
+                                低频{{item.value}}
                             </view>
                             <view class="wordBook_number ">
                                 50条单词
@@ -115,7 +115,7 @@
                         <navigator class="wordBooks_item shadow" 
                         wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
                             <view class="wordBook_name " >
-                                高频{{item.value}}
+                                低频{{item.value}}
                             </view>
                             <view class="wordBook_number ">
                                 50条单词
@@ -124,48 +124,7 @@
                     </view>
                 </view>
             </view>
- 
         </view>
-        <view wx:else class="hardWords_books">
-            <view class="wordBooks_unfinished">
-                <view class="wordBooks_list">
-                    <view class="wordBooks_head">
-                        未完成
-                    </view>
-                    <view class="wordBooks">
-                        <navigator class="wordBooks_item shadow" 
-                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
-                            <view class="wordBook_name " >
-                                难点{{item.value}}
-                            </view>
-                            <view class="wordBook_number ">
-                                50条单词
-                            </view>
-                        </navigator>
-                    </view>
-                </view>
-            </view>
-            <view class="wordBooks_finished">
-                <view class="wordBooks_list">
-                    <view class="wordBooks_head">
-                        已完成
-                    </view>
-                    <view class="wordBooks">
-                        <navigator class="wordBooks_item shadow" 
-                        wx:for="{{wordBook_names}}" wx:key url="/pages/wordBook/wordBook">
-                            <view class="wordBook_name " >
-                                难点{{item.value}}
-                            </view>
-                            <view class="wordBook_number ">
-                                50条单词
-                            </view>
-                        </navigator>
-                    </view>
-                </view>
-            </view>
- 
-        </view>
-        
     </view>
 </view>
 <!-- navigator -->

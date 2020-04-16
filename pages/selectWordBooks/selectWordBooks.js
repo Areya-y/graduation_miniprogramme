@@ -5,23 +5,18 @@ Page({
 	  wordBook_categorys:[
 		{
 			id:0,
-			name:"basicWords",
-			value:"基础单词"
-		},
-		{
-			id:1,
-			name:"importantWords",
-			value:"重要单词"
-		},
-		{
-			id:2,
 			name:"highFrequencyWords",
 			value:"高频单词"
 		},
 		{
-			id:3,
-			name:"hardWords",
-			value:"难点单词"
+			id:1,
+			name:"importantWords",
+			value:"中频单词"
+		},
+		{
+			id:2,
+			name:"basicWords",
+			value:"低频单词"
 		}
 	  ],
 	  wordBook_names:[
