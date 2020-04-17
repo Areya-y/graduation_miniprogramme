@@ -23,11 +23,14 @@ Page({
     index2: 2,
     index3: 1,
   },
-  onLoad(options) {
-	this.setData({
-	  rate_word:(this.data.index+1)/(this.data.words_thisBook.length) *100+'%'
-  });
-  },
+  onLoad(e){
+		var model = decodeURIComponent(e.wordsList);
+		var wordsList = JSON.parse(model);
+    console.log(wordsList);
+    this.setData({
+      rate_word:(this.data.index+1)/(this.data.words_thisBook.length) *100+'%'
+    });
+	},
 
   /**
    *  卡片1手势

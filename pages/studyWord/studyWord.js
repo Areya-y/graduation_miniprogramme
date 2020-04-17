@@ -51,6 +51,11 @@ Page({
 		]
 
 	},
+	onLoad(e){
+		var model = decodeURIComponent(e.wordsList);
+		var wordsList = JSON.parse(model);
+		console.log(wordsList);
+	},
 	tabSelect(e) {
 		this.setData({
 		  TabCur: e.currentTarget.dataset.id,

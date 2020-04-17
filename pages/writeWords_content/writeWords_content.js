@@ -9,6 +9,11 @@ Page({
 		error_msg:''
 	},
 	onLoad(){
+		// var model = decodeURIComponent(options.wordsList);
+		// var wordsList = JSON.parse(model);
+		// console.log(wordsList);
+		
+		console.log(wordsList);
 		this.setData({
 			rate_word:(this.data.index+1)/(this.data.words_thisBook.length) *100+'%'
 		});

@@ -6,5 +6,10 @@ Page({
     knowGradeNum_write:4,
     familiarGradeNum_write:76,
     words_thisBook: word_Data.local_wordList_selections,
-  }
+  },
+  onLoad(e){
+		var model = decodeURIComponent(e.wordsList);
+		var wordsList = JSON.parse(model);
+		console.log(wordsList);
+	}
 })
