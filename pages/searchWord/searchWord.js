@@ -41,7 +41,7 @@ Page({
                 inputVal: inputVal
             });
             wx.request({
-                url:"http://127.0.0.1:8080/xmut/searchword?word="+inputVal+"&&userID="+userID,
+                url:"http://127.0.0.1:8080/xmut/wordDetalisController/searchword?word="+inputVal+"&&userID="+userID,
                 method:'GET',
                 data:{},
                 success:function (res){

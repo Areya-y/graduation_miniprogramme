@@ -5,7 +5,8 @@
             <view class="word_english">
                 {{word.word}}
             </view>  
-            <view class="word_collect iconfont {{word.isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
+            <view class="word_collect iconfont {{word.isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}"
+                 bindtap="changeCollect"></view>
             
         </view>
         <view class="word_Phonogram">

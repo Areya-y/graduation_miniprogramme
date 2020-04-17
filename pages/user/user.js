@@ -16,7 +16,7 @@ Page({
 		that.setData({userID});
 
 		wx.request({
-			url:"http://127.0.0.1:8080/xmut/queryusersetting",
+			url:"http://127.0.0.1:8080/xmut/userSettingController/queryusersetting",
 			method: 'POST',
 			data: {
 				'userID': this.data.userID,

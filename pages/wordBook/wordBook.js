@@ -14,7 +14,7 @@ Page({
 	onShow: function(){
 		var that=this
 		wx.request({
-			url:"http://127.0.0.1:8080/xmut/listwords",
+			url:"http://127.0.0.1:8080/xmut/wordDetalisController/listwords",
 			method:'GET',
 			data:{},
 			success:function (res){
