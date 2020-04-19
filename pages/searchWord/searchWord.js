@@ -3,7 +3,32 @@ Page({
     data: {
         inputShowed: false,
         inputVal: "",
-        wordsList:[]
+        wordsList: []
+    },
+    onShow(e) {
+        const userID = wx.getStorageSync("userID");
+        var that = this;
+        var inputVal = that.data.inputVal;
+        wx.request({
+            url: "http://127.0.0.1:8080/xmut/wordDetalisController/searchword?word=" + inputVal + "&&userID=" + userID,
+            method: 'GET',
+            data: {},
+            success: function (res) {
+                var wordlist = res.data.searchword;
+                if (wordlist == null) {
+                    var toastText = '获取数据失败' + res.data.errMsg;
+                    wx.showToast({
+                        title: toastText,
+                        icon: 'none',
+                        duration: 2000,
+                    });
+                } else {
+                    that.setData({
+                        wordsList: wordlist
+                    });
+                }
+            }
+        });
     },
     showInput: function () {
         this.setData({
@@ -22,50 +47,50 @@ Page({
         });
     },
     inputTyping: function (e) {
-        const userID=wx.getStorageSync("userID");
-        var that=this
-        var inputVal= e.detail.value
+        const userID = wx.getStorageSync("userID");
+        var that = this
+        var inputVal = e.detail.value
         console.log(e.detail.value)
         // var regLetter=new RegExp('^[\u4e00-\u9fa5_a-zA-Z]+$','g');//判断用户输入的是否为字母
         // var rsLetter=regLetter.test(e.detail.value);
         // console.log("rs:::"+rsLetter);
-        if(inputVal==" "){
+        if (inputVal == " ") {
             wx.showToast({
-				title: '请输入文字',
-				icon: 'none',
-				duration: 2000
+                title: '请输入文字',
+                icon: 'none',
+                duration: 2000
             })
             this.cancelInput()
-        }else{
+        } else {
             that.setData({
                 inputVal: inputVal
             });
             wx.request({
-                url:"http://127.0.0.1:8080/xmut/wordDetalisController/searchword?word="+inputVal+"&&userID="+userID,
-                method:'GET',
-                data:{},
-                success:function (res){
-                    var wordlist=res.data.searchword;
-                    if (wordlist==null) {
-                        var toastText='获取数据失败'+res.data.errMsg;
+                url: "http://127.0.0.1:8080/xmut/wordDetalisController/searchword?word=" + inputVal + "&&userID=" + userID,
+                method: 'GET',
+                data: {},
+                success: function (res) {
+                    var wordlist = res.data.searchword;
+                    if (wordlist == null) {
+                        var toastText = '获取数据失败' + res.data.errMsg;
                         wx.showToast({
                             title: toastText,
                             icon: 'none',
                             duration: 2000,
                         });
-                    }	else{
+                    } else {
                         that.setData({
-                            wordsList:wordlist
+                            wordsList: wordlist
                         });
                     }
                 }
-            });	
+            });
         }
-        
+
         // if (rsLetter) {
-           
+
         //     // console.log(inputVal);
-            
+
         // } else {
         //     wx.showToast({
         //         title: '请输入英文',
@@ -74,24 +99,24 @@ Page({
         //     });
         // }
     },
-    jumpToWordDetails:function(e){
-        var index=e.target.dataset.index
-        let wordStr=JSON.stringify(this.data.wordsList[index]);
-        if(wordStr) {
+    jumpToWordDetails: function (e) {
+        var index = e.target.dataset.index
+        let wordStr = JSON.stringify(this.data.wordsList[index]);
+        if (wordStr) {
             wx.navigateTo({
-              url:"/pages/wordDetails/wordDetails?word="+wordStr,
-              success: function(res){
-                // success
-              },
+                url: "/pages/wordDetails/wordDetails?word=" + wordStr,
+                success: function (res) {
+                    // success
+                },
             })
-        }else{
+        } else {
             wx.showToast({
-				title: '请选择单词',
-				icon: 'none',
-				duration: 2000
+                title: '请选择单词',
+                icon: 'none',
+                duration: 2000
             })
         }
-        
+
         // url="/pages/wordDetails/wordDetails?sentences={{item.sentences}}" 
-    }
+    },
 });

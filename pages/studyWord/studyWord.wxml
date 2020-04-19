@@ -24,54 +24,67 @@
                 <view class="page_grades_icon ">
                     <view class="perGrade_icon color_grey iconfont iconcircle"></view>
                 </view>
-                <view class="grade_num color_grey">{{strangeGrade_num}}</view>
+                <view class="grade_num color_grey">{{strangeWordsList.length}}</view>
                 <view class="grade_text">陌生</view>
             </view>
             <view class="page_grades_item shadow_normol {{1==TabCur?'border_green shadow_large':''}}" bindtap="tabSelect" data-id="1">
                 <view class="page_grades_icon ">
                     <view class="perGrade_icon color_green iconfont iconcircle"></view>
                 </view>
-                <view class="grade_num color_green">{{knowGrade_num}}</view>
+                <view class="grade_num color_green">{{knowWordsList.length}}</view>
                 <view class="grade_text">认识</view>
             </view>
             <view class="page_grades_item shadow_normol {{2==TabCur?'border_green shadow_large':''}}" bindtap="tabSelect" data-id="2">
                 <view class="page_grades_icon ">
                     <view class="perGrade_icon color_green iconfont iconduihao"></view>
                 </view>
-                <view class="grade_num color_green">{{familiarGrade_num}}</view>
+                <view class="grade_num color_green">{{familiarWordsList.length}}</view>
                 <view class="grade_text">熟悉</view>
             </view>
         </scroll-view>
     </view>
     <view class="page_perWords">
         <view wx:if="{{0==TabCur}}" class="perWord_grade strangeGrade">
-            <navigator class="perWords_wordItem shadow_normol" url="/pages/wordDetails/wordDetails"
-            wx:for="{{strangeWordsList}}" wx:key="{{item.id}}">
+            <view class="perWords_wordItem shadow_normol"
+                wx:for="{{strangeWordsList}}" wx:key="{{item.id}}"
+               >
                 <view class="perWords_word_English">{{item.word}}</view>
-                <view class="perWords_word_Chinese">{{item.interpretation}}</view>
-            </navigator>   
+                <view class="perWords_word_Chinese"
+                    wx:for="{{item.interpretation}}" wx:for-item="item_in" wx:for-index="index_in">
+                    {{item_in}}
+                </view>
+            </view>   
         </view>
         <view wx:if="{{1==TabCur}}" class="perWord_grade knowGrade">
-            <navigator class="perWords_wordItem shadow_normol" url="/pages/wordDetails/wordDetails"
-            wx:for="{{knowWordsList}}" wx:key="{{item.id}}">
+            <view class="perWords_wordItem shadow_normol"
+                wx:for="{{knowWordsList}}" wx:key="{{item.id}}"
+               >
                 <view class="perWords_word_English">{{item.word}}</view>
-                <view class="perWords_word_Chinese">{{item.interpretation}}</view>
-            </navigator>   
+                <view class="perWords_word_Chinese"
+                    wx:for="{{item.interpretation}}" wx:for-item="item_in" wx:for-index="index_in">
+                    {{item_in}}
+                </view>
+            </view>   
         </view>
         <view wx:if="{{2==TabCur}}" class="perWord_grade familiarGrade">
-            <navigator class="perWords_wordItem shadow_normol" url="/pages/wordDetails/wordDetails"
-            wx:for="{{familiarWordsList}}" wx:key="{{item.id}}">
+            <view class="perWords_wordItem shadow_normol"
+                wx:for="{{familiarWordsList}}" wx:key="{{item.id}}"
+               >
                 <view class="perWords_word_English">{{item.word}}</view>
-                <view class="perWords_word_Chinese">{{item.interpretation}}</view>
-            </navigator>   
+                <view class="perWords_word_Chinese"
+                    wx:for="{{item.interpretation}}" wx:for-item="item_in" wx:for-index="index_in">
+                    {{item_in}}
+                </view>
+            </view>   
         </view>
     </view>
     <view class="startStudy_view">
-        <navigator class="startStudy shadow" url="/pages/studyWord_content/studyWord_content">
+        <view class="startStudy shadow" 
+            bindtap="jumpToStudyWordContent" >
             <view class="startStudy_Btn">
-                开始下一轮学习
+                开始学习
             </view>
-        </navigator>  
+        </view>  
     </view>
     
 </view>

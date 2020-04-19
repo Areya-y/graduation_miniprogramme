@@ -1,12 +1,14 @@
 // pages/wordCards/wordCards.js
-var postData = require("../../data/post_data.js");
+// var postData = require("../../data/post_data.js");
 let touchDotX = 0; //X按下时坐标
 let touchDotY = 0; //y按下时坐标
 Page({
   data: {
-	rate_word:'0%',
-	index:0,
-	words_thisBook: postData.local_wordList_selections,
+    userID:0,
+    rate_word:'0%',
+    index:0,
+    words_thisBook: [],
+  
     isFront1: true,
     isFront2: true,
     isFront3: true,
@@ -24,10 +26,13 @@ Page({
     index3: 1,
   },
   onLoad(e){
+    const userID=wx.getStorageSync("userID");
+		this.setData({userID});
 		var model = decodeURIComponent(e.wordsList);
 		var wordsList = JSON.parse(model);
     console.log(wordsList);
     this.setData({
+      words_thisBook:wordsList,
       rate_word:(this.data.index+1)/(this.data.words_thisBook.length) *100+'%'
     });
 	},
@@ -56,6 +61,7 @@ Page({
     let delta = Math.sqrt(absX * absX + absY * absY);
     console.log('起始点和离开点距离:' + delta + 'px');
     // 如果delta超过60px（可以视情况自己微调）,判定为手势触发
+    let wordsList=JSON.stringify(this.data.words_thisBook);
     if (delta >= 60) {
       // 如果 |x0-x1|>|y0-y1|,即absX>abxY,判定为左右滑动
       if (absX > absY) {
@@ -63,18 +69,19 @@ Page({
         if (tmX < 0) {
           console.log("左滑=====");
 		  // 执行左滑动画
-		  console.log(this.data.index==postData.local_wordList_selections.length - 1);
+		  console.log(this.data.index==this.data.words_thisBook.length - 1);
 		  
-		  if (this.data.index==postData.local_wordList_selections.length - 1) {
-			setTimeout(function(){
-				wx.reLaunch({
-				url:'./../wordBook/wordBook',
-				})
-			}, 2000);
-			wx.showToast({
-				title: '本轮学习结束啦',
-				icon: 'none',
-				duration: 2000
+		  if (this.data.index==this.data.words_thisBook.length - 1) {
+        
+          setTimeout(function(){
+            wx.redirectTo({
+              url:`/pages/wordBook/wordBook?wordsList=${encodeURIComponent(wordsList)}`,
+            })
+          }, 2000);
+          wx.showToast({
+            title: '本轮学习结束啦',
+            icon: 'none',
+            duration: 2000
 			})
 		  }
 		  else{
@@ -159,12 +166,13 @@ Page({
       if (absX > absY) {
         if (tmX < 0) {
 		  console.log("左滑=====");
-		  if (this.data.index==postData.local_wordList_selections.length - 1) {
-			setTimeout(function(){
-				wx.reLaunch({
-				url: './../wordBook/wordBook',
-				})
-			}, 2000);
+		  if (this.data.index==this.data.words_thisBook.length - 1) {
+        
+        setTimeout(function(){
+          wx.redirectTo({
+            url:`/pages/wordBook/wordBook?wordsList=${encodeURIComponent(wordsList)}`,
+          })
+        }, 2000);
 			wx.showToast({
 				title: '本轮学习结束啦',
 				icon: 'none',
@@ -238,16 +246,18 @@ Page({
     let absY = Math.abs(tmY);
     let delta = Math.sqrt(absX * absX + absY * absY);
     console.log('起始点和离开点距离:' + delta + 'px');
+    let wordsList=JSON.stringify(this.data.words_thisBook);
     if (delta >= 60) {
       if (absX > absY) {
         if (tmX < 0) {
 		  console.log("左滑=====");
-		  if (this.data.index==postData.local_wordList_selections.length - 1) {
-			setTimeout(function(){
-				wx.reLaunch({
-				url: './../wordBook/wordBook',
-				})
-			}, 2000);
+		  if (this.data.index==this.data.words_thisBook.length - 1) {
+       
+        setTimeout(function(){
+          wx.redirectTo({
+            url:`/pages/wordBook/wordBook?wordsList=${encodeURIComponent(wordsList)}`,
+          })
+        }, 2000);
 			wx.showToast({
 				title: '本轮学习结束啦',
 				icon: 'none',
@@ -437,27 +447,56 @@ Page({
       })
     }, 500);
   },
-  addCollect(){
+  changeCollect(){
     var word_change="words_thisBook["+this.data.index+"].isCollect";
-    console.log(word_change);
+    var wordID=this.data.words_thisBook[this.data.index].wordId;
+    console.log(wordID);
 		if (this.data.words_thisBook[this.data.index].isCollect==0) {
 			this.setData({
 			  [word_change]:1
-			});
-			wx.showToast({
-				title: '收藏成功',
-				icon: 'none',
-				duration: 2000
-			})
+      });
+      wx.request({
+        url: 'http://127.0.0.1:8080/xmut/wordLearningController/addCollect',
+        data: {
+          "wordID":wordID,
+          "userID":this.data.userID,
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        method: 'POST',
+        success: (result)=>{
+          console.log(result);
+          wx.showToast({
+            title: '收藏成功',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      });
 		} else {
 			this.setData({
 				[word_change]:0
-			});
-			wx.showToast({
-				title: '取消收藏',
-				icon: 'none',
-				duration: 2000
-			})
+      });
+      wx.request({
+        url: 'http://127.0.0.1:8080/xmut/wordLearningController/cancelCollect',
+        data: {
+          "wordID":wordID,
+          "userID":this.data.userID,
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        method: 'POST',
+        success: (result)=>{
+          console.log(result);
+          wx.showToast({
+            title: '取消收藏',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      });
 		}
 	}
 })

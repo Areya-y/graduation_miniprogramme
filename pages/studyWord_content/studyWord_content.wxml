@@ -2,33 +2,19 @@
 <view class="page_index">
     <image class="page_bgImg" src="https://s1.ax1x.com/2020/03/19/8swirR.jpg"/>
     <view class="studyWord_title">
-        <view class="flex studyWors_titleList">
-            <view class="flex-sub  studyWors_title_item color_grey">{{strangeGrade_num}}</view>
-            <view class="flex-sub  studyWors_arrow iconfont iconjiantou"></view>
-            <view class="flex-sub  studyWors_title_item color_green">{{knowGrade_num}}</view>
-            <view class="flex-sub  studyWors_arrow iconfont iconjiantou"></view>
-            <view class="flex-sub  studyWors_title_item color_green">{{familiarGrade_num}}</view>
-        </view>
-        <view class="flex studyWors_iconList">
-            <view class="flex-sub  iconList_title_item iconfont iconcircle color_grey"></view>
-            <view class="flex-sub  iconList_arrow"></view>
-            <view class="flex-sub  iconList_title_item iconfont iconcircle color_green"></view>
-            <view class="flex-sub  iconList_arrow"></view>
-            <view class="flex-sub  iconList_title_item iconfont iconduihao color_green"></view>
-        </view>
     </view>
     <view class="word_info">
-        <view>{{words_thisBook[index].word}}</view>
+        <view>{{wordsList[index].word}}</view>
     </view>
     <view wx:if="{{isSelected==0}}"  class="word_interpretationsList">
-        <button class="selectBtn" id='A' plain="true" bindtap="btnOpClick" style="background-color: {{bcA}};">{{words_thisBook[index].selections[0]}}</button>
-        <button class="selectBtn" id='B' plain="true" bindtap="btnOpClick" style="background-color: {{bcB}};">{{words_thisBook[index].selections[1]}}</button>
-        <button class="selectBtn" id='C' plain="true" bindtap="btnOpClick" style="background-color: {{bcC}};">{{words_thisBook[index].selections[2]}}</button>
-        <button class="selectBtn" id='D' plain="true" bindtap="btnOpClick" style="background-color: {{bcD}};">{{words_thisBook[index].selections[3]}}</button>
+        <button class="selectBtn" id='A' plain="true" bindtap="btnOpClick" style="background-color: {{bcA}};">{{selectionsList[index][0]}}</button>
+        <button class="selectBtn" id='B' plain="true" bindtap="btnOpClick" style="background-color: {{bcB}};">{{selectionsList[index][1]}}</button>
+        <button class="selectBtn" id='C' plain="true" bindtap="btnOpClick" style="background-color: {{bcC}};">{{selectionsList[index][2]}}</button>
+        <button class="selectBtn" id='D' plain="true" bindtap="btnOpClick" style="background-color: {{bcD}};">{{selectionsList[index][3]}}</button>
     </view>
     <view wx:else class="studyWord_rightAnswer">
         <view class="word_rightAnswer">
-            {{words_thisBook[index].interpretation}}
+            {{wordsList[index].interpretation}}
         </view>
         <button class="studyWord_Btn" bindtap="nextWord" >下一词</button>
     </view>

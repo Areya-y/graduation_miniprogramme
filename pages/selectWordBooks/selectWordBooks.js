@@ -23,7 +23,7 @@ Page({
 	  unfinished_wordBook:[],
 	  finished_wordBook:[]
 	},
-	onLoad(){
+	onShow(){
 		const worsNumPer=wx.getStorageSync("user_wordNum");
 		this.setData({
 			worsNumPer:worsNumPer,

@@ -40,22 +40,22 @@ Page({
 		that.setData({
 			word:word
 		});
-		wx.request({
-			url: 'http://127.0.0.1:8080/xmut/wordLearningController/insertWordLearning',
-			data: {
-				"wordID":that.data.word.wordId,
-				"userID":that.data.userID,
-			},
-			header: {
-				'content-type': 'application/x-www-form-urlencoded'
-			},
-			method: 'POST',
-			success: (result)=>{
-				console.log(result.data);
-				console.log(result.errMsg);
+		// wx.request({
+		// 	url: 'http://127.0.0.1:8080/xmut/wordLearningController/insertWordLearning',
+		// 	data: {
+		// 		"wordID":that.data.word.wordId,
+		// 		"userID":that.data.userID,
+		// 	},
+		// 	header: {
+		// 		'content-type': 'application/x-www-form-urlencoded'
+		// 	},
+		// 	method: 'POST',
+		// 	success: (result)=>{
+		// 		console.log(result.data);
+		// 		console.log(result.errMsg);
 				
-			}
-		});
+		// 	}
+		// });
 	  },
 	  changeCollect(){
 		  var that=this

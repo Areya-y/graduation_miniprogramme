@@ -7,7 +7,7 @@
         </view>
     </view>
     <view class="word_interpretation web-font">
-        {{words_thisBook[index].interpretation}}
+        {{wordsList[index].interpretation}}
     </view>
     <view class="writeWord_input">
         <van-cell-group class="padding writeWord_input_context">

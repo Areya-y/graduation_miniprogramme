@@ -44,7 +44,7 @@ Page({
 			remindTime: e.detail.value
 		})
 		wx.request({
-			url:"http://127.0.0.1:8080/xmut/modifyusersetting",
+			url:"http://127.0.0.1:8080/xmut/userSettingController/modifyusersetting",
 			method: 'POST',
 			data: {
 				'userID': this.data.userID,
@@ -67,7 +67,7 @@ Page({
 			user_wordsBook: e.detail.value
 		})
 		wx.request({
-			url:"http://127.0.0.1:8080/xmut/modifyusersetting",
+			url:"http://127.0.0.1:8080/xmut/userSettingController/modifyusersetting",
 			method: 'POST',
 			data: {
 				'userID': this.data.userID,
@@ -93,7 +93,7 @@ Page({
 				user_wordNum: e.detail.value
 			})
 			wx.request({
-				url:"http://127.0.0.1:8080/xmut/modifyusersetting",
+				url:"http://127.0.0.1:8080/xmut/userSettingController/modifyusersetting",
 				method: 'POST',
 				data: {
 					'userID': this.data.userID,

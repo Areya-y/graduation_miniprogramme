@@ -110,6 +110,7 @@ page .border_green {
 }
 .page_index .page_perWords .perWord_grade .perWords_wordItem .perWords_word_Chinese {
   line-height: 1.8em;
+  padding-left: 20rpx;
 }
 .page_index .startStudy_view {
   width: 100%;

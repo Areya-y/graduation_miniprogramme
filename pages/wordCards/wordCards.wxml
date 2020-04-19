@@ -12,7 +12,7 @@
             <!-- 正面 -->
             <block wx:if="{{isFront1}}">
                 <view class="body-container" >
-                    <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
+                    <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="changeCollect"></view>
                     <view class="word_eng">
                          {{words_thisBook[index].word}}
                     </view>
@@ -30,7 +30,7 @@
             <!-- 正面 -->
             <block wx:if="{{isFront2}}">
             <view class="body-container" >
-                <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
+                <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="changeCollect"></view>
                 <view class="word_eng"> {{words_thisBook[index].word}}</view>
             </view>
             </block>
@@ -46,7 +46,7 @@
             <!-- 正面 -->
             <block wx:if="{{isFront3}}">
             <view class="body-container" >
-                <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="addCollect"></view>
+                <view class="word_collect  iconfont {{words_thisBook[index].isCollect==0?'iconshoucang':'iconyishoucang color_yellow'}}" bindtap="changeCollect"></view>
                 <view class="word_eng">{{words_thisBook[index].word}}</view>
             </view>
             </block>

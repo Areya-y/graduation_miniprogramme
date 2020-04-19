@@ -30,8 +30,7 @@ Page({
 						'content-type': 'application/x-www-form-urlencoded'
 					},
 					success: function (res) {
-						console.log(e.detail.errMsg)
-						console.log(res.data.userID);
+						console.log(res.data);
 						
 						var userID=res.data.userID.userId
 						console.log(userID);
