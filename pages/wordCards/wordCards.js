@@ -82,7 +82,20 @@ Page({
             title: '本轮学习结束啦',
             icon: 'none',
             duration: 2000
-			})
+          });
+          wx.request({
+            url: 'http://127.0.0.1:8080/xmut/wordLearningController/usersignin',
+            data: {
+              "userID":this.data.userID,
+            },
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            method: 'POST',
+            success: (result)=>{
+              console.log(result);
+            }
+          });
 		  }
 		  else{
 				this.Animation1(-500);
@@ -162,6 +175,7 @@ Page({
     let absY = Math.abs(tmY);
     let delta = Math.sqrt(absX * absX + absY * absY);
     console.log('起始点和离开点距离:' + delta + 'px');
+    let wordsList=JSON.stringify(this.data.words_thisBook);
     if (delta >= 60) {
       if (absX > absY) {
         if (tmX < 0) {
@@ -173,11 +187,24 @@ Page({
             url:`/pages/wordBook/wordBook?wordsList=${encodeURIComponent(wordsList)}`,
           })
         }, 2000);
-			wx.showToast({
-				title: '本轮学习结束啦',
-				icon: 'none',
-				duration: 2000
-			})
+        wx.showToast({
+          title: '本轮学习结束啦',
+          icon: 'none',
+          duration: 2000
+        })
+        wx.request({
+          url: 'http://127.0.0.1:8080/xmut/wordLearningController/usersignin',
+          data: {
+            "userID":this.data.userID,
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          },
+          method: 'POST',
+          success: (result)=>{
+            console.log(result);
+          }
+        });
 		  }
 		  else{
 				this.Animation2(-500);
@@ -253,16 +280,29 @@ Page({
 		  console.log("左滑=====");
 		  if (this.data.index==this.data.words_thisBook.length - 1) {
        
-        setTimeout(function(){
-          wx.redirectTo({
-            url:`/pages/wordBook/wordBook?wordsList=${encodeURIComponent(wordsList)}`,
+          setTimeout(function(){
+            wx.redirectTo({
+              url:`/pages/wordBook/wordBook?wordsList=${encodeURIComponent(wordsList)}`,
+            })
+          }, 2000);
+          wx.showToast({
+            title: '本轮学习结束啦',
+            icon: 'none',
+            duration: 2000
           })
-        }, 2000);
-			wx.showToast({
-				title: '本轮学习结束啦',
-				icon: 'none',
-				duration: 2000
-			})
+          wx.request({
+            url: 'http://127.0.0.1:8080/xmut/wordLearningController/usersignin',
+            data: {
+              "userID":this.data.userID,
+            },
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            method: 'POST',
+            success: (result)=>{
+              console.log(result);
+            }
+          });
 		  }
 		  else{
 				this.Animation3(-500);

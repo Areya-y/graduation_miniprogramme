@@ -18,15 +18,15 @@
   <view class="userSetting">
       <view class="user_signIn">
         <view class="continuousSign signIn_content">
-            <view class="his_num">0</view>
+            <view class="his_num">{{continuousDay}}</view>
             <view class="his_text">连续签到</view>
         </view>
         <view class="cumulativeSign signIn_content">
-            <view class="his_num">0</view>
+            <view class="his_num">{{signInDayNum}}</view>
             <view class="his_text">累计签到</view>
         </view>
         <view class="maximumContinuous signIn_content">
-            <view class="his_num">0</view>
+            <view class="his_num">{{longestContinuousDay}}</view>
             <view class="his_text">最大连续</view>
         </view>
       </view>

@@ -6,7 +6,10 @@ Page({
 		array_wordsBook:['英语一','英语二'],
 		user_wordsBook:1,
 		user_wordNum:50,
-		userID:0
+		userID:0,
+		continuousDay:0,
+		signInDayNum:0,
+		longestContinuousDay:0
 	},
 	onShow:function(){
 		var that=this;
@@ -33,6 +36,24 @@ Page({
 				});
 				wx.setStorageSync("user_wordsBook",res.data.wordBook);
 				wx.setStorageSync("user_wordNum",res.data.wordsNumPer);
+			}
+		});
+		wx.request({
+			url:"http://127.0.0.1:8080/xmut/wordLearningController/signindata",
+			method: 'POST',
+			data: {
+				'userID': this.data.userID,
+			  },
+			header: {
+				'content-type': 'application/x-www-form-urlencoded'
+			},
+			success: function (res) {
+				console.log(res);
+				that.setData({
+					continuousDay:res.data.continuousDay,
+					signInDayNum:res.data.signInDayNum,
+					longestContinuousDay:res.data.longestContinuousDay
+				});
 			}
 		});
 		

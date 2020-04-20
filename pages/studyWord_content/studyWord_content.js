@@ -54,18 +54,30 @@ Page({
 		else{
 			let wordsList=JSON.stringify(this.data.wordsList);
 			wx.request({
-			url:"http://127.0.0.1:8080/xmut/wordLearningController/insertWordBookLearning?userID="+userID,
-			data: wordsList,
-			method: 'POST',
-			header: {
-				'contentType': "application/json;charset=utf-8;"
-			},
-			success:function (res){
-				console.log(res);
-				
-			}
+				url:"http://127.0.0.1:8080/xmut/wordLearningController/insertWordBookLearning?userID="+userID,
+				data: wordsList,
+				method: 'POST',
+				header: {
+					'contentType': "application/json;charset=utf-8;"
+				},
+				success:function (res){
+					console.log(res);
+					
+				}
 			});	
-			
+			wx.request({
+				url: 'http://127.0.0.1:8080/xmut/wordLearningController/usersignin',
+				data: {
+				  "userID":userID,
+				},
+				header: {
+				  'content-type': 'application/x-www-form-urlencoded'
+				},
+				method: 'POST',
+				success: (res)=>{
+				  console.log(res);
+				}
+			  });
 			
 			setTimeout(function(){
 				wx.redirectTo({
