@@ -146,6 +146,31 @@ Page({
 		   path: '/pages/index/index',
 		   imageUrl: 'https://s2.ax1x.com/2020/03/10/8PiIl8.jpg' 
 	   }
-   }
+   },
+   wordlistcollect(e){
+		wx.request({
+			url:"http://127.0.0.1:8080/xmut/wordDetalisController/wordlistcollect",
+			method: 'POST',
+			data: {
+				'userID': this.data.userID,
+			},
+			header: {
+				'content-type': 'application/x-www-form-urlencoded'
+			},
+			success: function (res) {
+				console.log(res.data.wordlistcollect);
+				var wordsList=res.data.wordlistcollect;
+				var model = JSON.stringify(wordsList);
+				var wordBookName="生词本";
+				wx.navigateTo({
+					url:`/pages/wordBook/wordBook?wordsList=${encodeURIComponent(model)}&&wordBookName=${wordBookName}`,
+					success: function(res){
+					// success
+					},
+				})
+			}
+		});
+		
+	}
 })
 

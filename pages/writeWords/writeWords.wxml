@@ -26,7 +26,6 @@
       <view class="wordItem shadow_normol" 
                   wx:for="{{wordsList}}" wx:key="{{item.id}}"
                   style='color:{{item.writeNum==null?"#ff8e7c":item.writeNum==0?"#ff8e7c":item.writeNum==1?"#6a7579":"#23b26d"}}' 
-                  bindtap="jumpToWordDetails" data-word="{{item}}"
         >
           <view class="wordItem_word_English">{{item.word}}</view>
           <view class="wordItem_word_Chinese"

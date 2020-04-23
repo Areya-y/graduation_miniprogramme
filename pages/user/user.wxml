@@ -54,8 +54,8 @@
         </view>
       </view>
       <view class="user_others">
-          <view class="user_others_item">
-             <navigator  url="/pages/newWords_notebook/newWords_notebook" >我的生词本</navigator>
+          <view class="user_others_item"  bindtap="wordlistcollect">
+             <view  >我的生词本</view>
           </view>
           <view class="user_others_item app_contact">
             <text >联系客服</text>

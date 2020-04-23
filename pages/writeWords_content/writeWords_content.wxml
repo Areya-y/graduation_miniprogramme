@@ -17,12 +17,12 @@
                 right-icon="arrow"
                 right-icon-class="custom-icon"
                 bind:click-icon="nextWord"
+                bind:change="verification"
                 type="textarea"
                 placeholder="输入答案"
                 rows="1"
                 autosize
                 error-message="{{error_msg}}"
-                border="{{ false }}"
             />
         </van-cell-group>
     </view>
