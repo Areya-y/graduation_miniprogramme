@@ -14,127 +14,27 @@
   height: 100%;
 }
 .page_index .studyRoom_page .studyRoom_page_title {
-  font-size: 30rpx;
+  font-size: 35rpx;
   position: absolute;
   margin: 22rpx 25% 0 25%;
   width: 50%;
-  background-color: #dde0e0;
-  border-radius: 20px;
   text-align: center;
 }
 .page_index .studyRoom_page .studyRoom_page_title .page_title_content .page_title_item {
+  width: 80%;
   display: inline-block;
   line-height: 80rpx;
-  margin: 12rpx 10rpx;
-  padding: 0 10rpx;
-  border-radius: 20px;
-}
-.page_index .studyRoom_page .studyRoom_page_title .page_title_content .page_title_item_selected {
+  border-radius: 18px;
   background-color: #eff1f1;
-  font-weight: bold;
   color: black;
 }
 .page_index .studyRoom_page .studyRoom_page_content {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 140rpx;
+  margin-top: 130rpx;
   text-align: center;
   width: 90%;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking {
-  margin-top: 10rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_page_none {
-  margin-top: 55rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_page_none .studyRoom_creat .studyRoom_creat_btn {
-  height: 200rpx;
-  width: 200rpx;
-  background-color: #5fcaff;
-  color: white;
-  font-size: 32rpx;
-  font-weight: normal;
-  box-shadow: 15px 0 15px -15px #5fcaff, -15px 0 15px -15px #5fcaff;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_page_none .studyRoom_join {
-  margin-top: 35rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_page_none .studyRoom_join .studyRoom_join_btn {
-  height: 200rpx;
-  width: 200rpx;
-  background-color: #a6a7c5;
-  color: white;
-  font-size: 32rpx;
-  font-weight: normal;
-  box-shadow: 15px 0 15px -15px #a6a7c5, -15px 0 15px -15px #a6a7c5;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_page_none .studyRoom_bottom {
-  margin-top: 375rpx;
-  bottom: 10rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_page_none .studyRoom_bottom .studyRoom_bottom_text {
-  font-size: 26rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_userHave .ScoreRank_list {
-  margin-top: 10rpx;
-  overflow: hidden;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_userHave .ScoreRank_list .ScoreRank_item {
-  border-bottom: solid #e9e9e9 2rpx;
-  position: relative;
-  align-items: center;
-  height: 140rpx;
-  background-color: #fefefe;
-  justify-content: flex-end;
-  display: flex;
-  padding-right: 10rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_userHave .ScoreRank_list .ScoreRank_item .ScoreRank_userNumber {
-  color: #191919;
-  font-size: 35rpx;
-  position: absolute;
-  left: 0rpx;
-  line-height: 1.6em;
-  font-weight: bolder;
-  text-align: center;
-  width: 80rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_userHave .ScoreRank_list .ScoreRank_item .ScoreRank_userHead {
-  font-variant: small-caps;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  width: 96rpx;
-  height: 96rpx;
-  background-size: cover;
-  background-position: center;
-  vertical-align: middle;
-  position: absolute;
-  left: 80rpx;
-  border-radius: 5000rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_userHave .ScoreRank_list .ScoreRank_item .ScoreRank_userName {
-  color: #191919;
-  font-size: 30rpx;
-  position: absolute;
-  left: 196rpx;
-  line-height: 1.6em;
-}
-.page_index .studyRoom_page .studyRoom_page_content .selfStudyRoom_ranking .studyRoom_userHave .ScoreRank_list .ScoreRank_item .ScoreRank_userScore {
-  font-size: 38rpx;
-  font-weight: bold;
-  width: 100rpx;
-  text-align: center;
-  color: #f7941d;
-  margin-right: 40rpx;
-}
-.page_index .studyRoom_page .studyRoom_page_content .wechat_ranking {
-  background-color: #a6a7c5;
 }
 .page_index .studyRoom_page .studyRoom_page_content .wechat_ranking .wechatRank_list {
   margin-top: 10rpx;
@@ -192,4 +92,11 @@
   text-align: center;
   color: #f7941d;
   margin-right: 40rpx;
+}
+.page_index .studyRoom_page .studyRoom_page_content .wechat_ranking .studyRoom_bottom {
+  margin-top: 310rpx;
+  bottom: 10rpx;
+}
+.page_index .studyRoom_page .studyRoom_page_content .wechat_ranking .studyRoom_bottom .studyRoom_bottom_text {
+  font-size: 26rpx;
 }

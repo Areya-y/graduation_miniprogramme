@@ -86,18 +86,6 @@ Page({
                 }
             });
         }
-
-        // if (rsLetter) {
-
-        //     // console.log(inputVal);
-
-        // } else {
-        //     wx.showToast({
-        //         title: '请输入英文',
-        //         icon: 'none',
-        //         duration: 3000
-        //     });
-        // }
     },
     jumpToWordDetails: function (e) {
         var index = e.target.dataset.index

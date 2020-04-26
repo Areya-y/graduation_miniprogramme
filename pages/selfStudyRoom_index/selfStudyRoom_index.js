@@ -1,15 +1,19 @@
 // pages/selfStudyRoom_index/selfStudyRoom_index.js
 Page({
 	data: {
-		TabCur: 0,
-		scrollLeft:0,
-		//用户是否有自习室
-		isUserHaveStudyRoom:0
+		userInfoList:[]
 	  },
-	  tabSelect(e) {
-		this.setData({
-		  TabCur: e.currentTarget.dataset.id,
-		  scrollLeft: (e.currentTarget.dataset.id-1)*60
-		})
-	  }
+	onShow(){
+		var that=this;
+		wx.request({
+			url:"http://127.0.0.1:8080/xmut/wordLearningController/getrankinglistdata",
+			method: 'GET',
+			success: function (res) {
+				console.log(res);
+				that.setData({
+					userInfoList:res.data.success
+				});
+			}
+		});
+	}
 })
