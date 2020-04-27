@@ -24,31 +24,56 @@ Page({
 	  finished_wordBook:[]
 	},
 	onShow(){
+		var that=this;
 		const worsNumPer=wx.getStorageSync("user_wordNum");
-		this.setData({
+		that.setData({
 			worsNumPer:worsNumPer,
 		})
 		const userID=wx.getStorageSync("userID");
-		wx.request({
-			url: 'http://localhost:8080/xmut/wordDetalisController/getWordsPerBook',
-			data: {
-				"degree":this.data.TabCur,
-				"userID":userID,
-			},
-			header: {
-				'content-type': 'application/x-www-form-urlencoded'
-			},
-			method: 'POST',
-			success: (result)=>{
-				console.log(result.data);
-				
-				this.setData({
-					unfinished_wordBook: result.data.unfinished_wordBook,
-					finished_wordBook: result.data.finished_wordBook
-				})
-				
-			}
-		});
+		// 查看是否授权
+        wx.getSetting({
+            success: function (res) {
+                if (!res.authSetting['scope.userInfo']) {
+                    //未登录,跳转到登录页
+                    setTimeout(function(){
+                        wx.navigateTo({
+                            url:`/pages/login/login`,
+                            success: function(res){
+                            // success
+                            },
+                        })
+                    }, 2000);
+                    wx.showToast({
+                        title: '先登录哦',
+                        icon: 'none',
+                        duration: 2000
+                    })
+                }else{
+                    wx.request({
+						url: 'http://localhost:8080/xmut/wordDetalisController/getWordsPerBook',
+						data: {
+							"degree":that.data.TabCur,
+							"userID":userID,
+						},
+						header: {
+							'content-type': 'application/x-www-form-urlencoded'
+						},
+						method: 'POST',
+						success: (result)=>{
+							console.log(result.data);
+							
+							that.setData({
+								unfinished_wordBook: result.data.unfinished_wordBook,
+								finished_wordBook: result.data.finished_wordBook
+							})
+							
+						}
+					});
+                }
+            }
+        })
+		
+		
 	},
 	tabSelect(e) {
 		var that=this;

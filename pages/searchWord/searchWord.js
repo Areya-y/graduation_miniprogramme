@@ -6,29 +6,54 @@ Page({
         wordsList: []
     },
     onShow(e) {
-        const userID = wx.getStorageSync("userID");
         var that = this;
+
+        const userID = wx.getStorageSync("userID");
+        console.log(userID);
         var inputVal = that.data.inputVal;
-        wx.request({
-            url: "http://127.0.0.1:8080/xmut/wordDetalisController/searchword?word=" + inputVal + "&&userID=" + userID,
-            method: 'GET',
-            data: {},
+        // 查看是否授权
+        wx.getSetting({
             success: function (res) {
-                var wordlist = res.data.searchword;
-                if (wordlist == null) {
-                    var toastText = '获取数据失败' + res.data.errMsg;
+                if (!res.authSetting['scope.userInfo']) {
+                    //未登录,跳转到登录页
+                    setTimeout(function(){
+                        wx.navigateTo({
+                            url:`/pages/login/login`,
+                            success: function(res){
+                            // success
+                            },
+                        })
+                    }, 2000);
                     wx.showToast({
-                        title: toastText,
+                        title: '先登录哦',
                         icon: 'none',
-                        duration: 2000,
-                    });
-                } else {
-                    that.setData({
-                        wordsList: wordlist
+                        duration: 2000
+                    })
+                }else{
+                    wx.request({
+                        url: "http://127.0.0.1:8080/xmut/wordDetalisController/searchword?word=" + inputVal + "&&userID=" + userID,
+                        method: 'GET',
+                        data: {},
+                        success: function (res) {
+                            var wordlist = res.data.searchword;
+                            if (wordlist == null) {
+                                var toastText = '获取数据失败' + res.data.errMsg;
+                                console.log(toastText);
+                                wx.showToast({
+                                    title: toastText,
+                                    icon: 'none',
+                                    duration: 2000,
+                                });
+                            } else {
+                                that.setData({
+                                    wordsList: wordlist
+                                });
+                            }
+                        }
                     });
                 }
             }
-        });
+        })
     },
     showInput: function () {
         this.setData({
